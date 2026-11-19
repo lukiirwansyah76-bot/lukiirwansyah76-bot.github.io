@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Web3 Project</title>
+<style>
+body {
+  background: #080d20;
+  color: white;
+  font-family: Arial;
+  text-align: center;
+  padding: 40px 15px;
+}
+h1 { color: #35d6ff; }
+.card {
+  background: #172443;
+  padding: 25px;
+  border-radius: 15px;
+  margin-top: 25px;
+}
+</style>
+</head>
+<body>
+<h1>Welcome to My Web3 Project</h1>
+<div class="card">
+<h2>Explore Web3</h2>
+<p>Learn about Blockchain, Crypto and Decentralization.</p>
+<p>Building the future together!</p>
+</div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Web3 Project</title>
+</head>
+
+<body style="background:#080d20;color:white;text-align:center;font-family:Arial;padding:30px">
+
+<h1 style="color:#35d6ff">WELCOME TO WEB3</h1>
+
+<h2>Explore Blockchain</h2>
+
+<p>Learn about Crypto and Decentralization.</p>
+
+<p>Building the future together!</p>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Web3 Project</title>
+</head>
+
+<body style="background:#080d20;color:white;text-align:center;font-family:Arial;padding:30px">
+
+<h1 style="color:#35d6ff">WELCOME TO WEB3</h1>
+
+<h2>Explore Blockchain</h2>
+
+<p>Learn about Crypto and Decentralization.</p>
+
+<p>Building the future together!</p>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+
