@@ -25,7 +25,42 @@ h2{color:#39dcff}
 .news p{color:#bdc9d8}
 .label{font-size:12px;color:#39dcff}
 footer{margin-top:40px;padding:25px;text-align:center;background:#091a30;color:#9aacc0}
-.btn{display:inline-block;background:#39dcff;color:#071326;text-decoration:none;padding:10px 18px;border-radius:8px;font-weight:bold}
+.btn{display:inline-block;background:#39dcff;color:#071326;text-decoration:none;padding:10px 18px;border-radius:8px;font-weight:bold}.tools{
+background:#122b47;
+padding:18px;
+border-radius:12px;
+margin:20px 0;
+}
+.tools input{
+width:100%;
+padding:13px;
+border-radius:8px;
+border:1px solid #39dcff;
+background:#071326;
+color:white;
+font-size:15px;
+}
+.categories{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:15px;
+}
+.categories button{
+background:#173957;
+color:#fff;
+border:1px solid #39dcff;
+padding:9px 14px;
+border-radius:20px;
+cursor:pointer;
+}
+.categories button:hover{
+background:#39dcff;
+color:#071326;
+}
+.news[hidden]{
+display:none;
+  }
 </style>
 </head>
 <body>
@@ -47,28 +82,43 @@ footer{margin-top:40px;padding:25px;text-align:center;background:#091a30;color:#
 <p>Jelajahi perkembangan teknologi digital dan masa depan ekonomi terdesentralisasi.</p>
 </section>
 
-<main class="wrap">
+<main class="wrap"><section class="tools">
+  <h2>Cari Artikel Web3</h2>
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Cari artikel yang ingin kamu baca..."
+  >
+
+  <div class="categories">
+    <button onclick="filterCategory('all')">Semua</button>
+    <button onclick="filterCategory('blockchain')">Blockchain</button>
+    <button onclick="filterCategory('crypto')">Crypto</button>
+    <button onclick="filterCategory('ai')">AI & Web3</button>
+    <button onclick="filterCategory('keamanan')">Keamanan</button>
+  </div>
+</section>
 <h2>Berita dan Wawasan Web3</h2>
 
-<article class="news">
+<article class="news" data-category="blockchain"> data-category="blockchain">
 <div class="label">EDUKASI BLOCKCHAIN</div>
 <h3>Mengapa Blockchain Penting untuk Masa Depan Digital?</h3>
 <p>Blockchain memungkinkan pencatatan transaksi secara transparan dan terdistribusi. Teknologi ini menjadi fondasi berbagai inovasi seperti DeFi, tokenisasi aset dan identitas digital.</p>
 </article>
 
-<article class="news">
+ <article class="news" data-category="crypto">
 <div class="label">CRYPTO & DEFI</div>
 <h3>Memahami Perkembangan Ekosistem DeFi</h3>
 <p>Decentralized Finance atau DeFi menghadirkan layanan keuangan berbasis blockchain. Pelajari cara kerja protokol, risiko smart contract dan keamanan sebelum berpartisipasi.</p>
 </article>
 
-<article class="news">
+ <article class="news" data-category="ai">
 <div class="label">AI & WEB3</div>
 <h3>AI dan Blockchain: Dua Teknologi yang Saling Melengkapi</h3>
 <p>AI dapat membantu otomatisasi dan analisis data, sementara blockchain menyediakan sistem pencatatan yang transparan. Integrasi keduanya membuka peluang inovasi baru.</p>
 </article>
 
-<article class="news">
+<article class="news" data-category="keamanan">
 <div class="label">KEAMANAN DIGITAL</div>
 <h3>Jaga Keamanan Wallet Crypto</h3>
 <p>Jangan pernah membagikan seed phrase atau private key. Selalu periksa alamat situs dan akun resmi proyek sebelum menghubungkan wallet.</p>
@@ -85,6 +135,6 @@ footer{margin-top:40px;padding:25px;text-align:center;background:#091a30;color:#
 <strong>WEB3 VISION</strong>
 <p>Belajar • Berbagi • Berkembang</p>
 <p>© 2026 WEB3 VISION</p>
-</footer>
+</footer><article class="news" data-category="keamanan">
 </body>
 </html>
