@@ -100,7 +100,7 @@ display:none;
 </section>
 <h2>Berita dan Wawasan Web3</h2>
 
-<article class="news" data-category="blockchain"> data-category="blockchain">
+<article class="news" data-category="blockchain">
 <div class="label">EDUKASI BLOCKCHAIN</div>
 <h3>Mengapa Blockchain Penting untuk Masa Depan Digital?</h3>
 <p>Blockchain memungkinkan pencatatan transaksi secara transparan dan terdistribusi. Teknologi ini menjadi fondasi berbagai inovasi seperti DeFi, tokenisasi aset dan identitas digital.</p>
@@ -135,6 +135,34 @@ display:none;
 <strong>WEB3 VISION</strong>
 <p>Belajar • Berbagi • Berkembang</p>
 <p>© 2026 WEB3 VISION</p>
-</footer><article class="news" data-category="keamanan">
+<article class="news" data-category="keamanan"><script>
+const searchInput = document.getElementById("searchInput");
+const articles = document.querySelectorAll("article.news");
+
+let selectedCategory = "all";
+
+function filterArticles() {
+  const keyword = searchInput.value.toLowerCase();
+
+  articles.forEach(article => {
+    const text = article.innerText.toLowerCase();
+    const category = article.dataset.category;
+
+    const matchSearch = text.includes(keyword);
+    const matchCategory =
+      selectedCategory === "all" ||
+      category === selectedCategory;
+
+    article.hidden = !(matchSearch && matchCategory);
+  });
+}
+
+function filterCategory(category) {
+  selectedCategory = category;
+  filterArticles();
+}
+
+searchInput.addEventListener("input", filterArticles);
+  </script>
 </body>
 </html>
