@@ -79,7 +79,22 @@ details summary {
 details p {
   margin-top: 12px;
   line-height: 1.8;
-  }</style>
+ .article-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 65px;
+  background: linear-gradient(135deg, #123b61, #071326);
+  border: 1px solid #24739a;
+}
+
+.article-image span {
+  filter: drop-shadow(0 0 15px #39dcff);
+} </style>
 </head>
 <body>
 <header>
@@ -119,7 +134,9 @@ details p {
 <h2>Berita dan Wawasan Web3</h2>
 
 <article class="news" data-category="blockchain">
-<div class="label">EDUKASI BLOCKCHAIN</div>
+<div class="label">EDUKASI BLOCKCHAIN</div><div class="article-image">
+  <span>⛓️</span>
+</div>
 <h3>Mengapa Blockchain Penting untuk Masa Depan Digital?</h3>
 <p>Blockchain memungkinkan pencatatan transaksi secara transparan dan terdistribusi. Teknologi ini menjadi fondasi berbagai inovasi seperti DeFi, tokenisasi aset dan identitas digital.</p><details>
   <summary>Baca Selengkapnya</summary>
@@ -136,7 +153,9 @@ details p {
 </article>
 
  <article class="news" data-category="crypto">
-<div class="label">CRYPTO & DEFI</div>
+<div class="article-image">
+  <span>💎</span>
+</div><div class="label">CRYPTO & DEFI</div>
 <h3>Memahami Perkembangan Ekosistem DeFi</h3>
 <p>Decentralized Finance atau DeFi menghadirkan layanan keuangan berbasis blockchain. Pelajari cara kerja protokol, risiko smart contract dan keamanan sebelum berpartisipasi.</p><details>
   <summary>Baca Selengkapnya</summary>
@@ -153,7 +172,9 @@ details p {
 </article>
 
  <article class="news" data-category="ai">
-<div class="label">AI & WEB3</div>
+<div class="label">AI & WEB3</div><div class="article-image">
+  <span>🤖</span>
+</div>
 <h3>AI dan Blockchain: Dua Teknologi yang Saling Melengkapi</h3>
 <p>AI dapat membantu otomatisasi dan analisis data, sementara blockchain menyediakan sistem pencatatan yang transparan. Integrasi keduanya membuka peluang inovasi baru.</p><details>
   <summary>Baca Selengkapnya</summary>
@@ -170,7 +191,9 @@ details p {
 </article>
 
 <article class="news" data-category="keamanan">
-<div class="label">KEAMANAN DIGITAL</div>
+<div class="label">KEAMANAN DIGITAL</div><div class="article-image">
+  <span>🔐</span>
+</div>
 <h3>Jaga Keamanan Wallet Crypto</h3>
 <p>Jangan pernah membagikan seed phrase atau private key. Selalu periksa alamat situs dan akun resmi proyek sebelum menghubungkan wallet.</p><details>
   <summary>Baca Selengkapnya</summary>
