@@ -1,12 +1,34 @@
 
+
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://lukiirwansyah76-bot.github.io/web3-vision/</loc>
+    <loc>https://lukiirwansyah76-bot.github.io/</loc>
   </url>
+
   <url>
-    <loc>https://lukiirwansyah76-bot.github.io/web3-vision/berita.html</loc>
+    <loc>https://lukiirwansyah76-bot.github.io/about.html</loc>
   </url>
+
   <url>
-    <loc>https://lukiirwansyah76-bot.github.io/web3-vision/airdrop.html</loc>
+    <loc>https://lukiirwansyah76-bot.github.io/academy.html</loc>
   </url>
+
+  <url>
+    <loc>https://lukiirwansyah76-bot.github.io/advertising.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lukiirwansyah76-bot.github.io/airdrop.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lukiirwansyah76-bot.github.io/berita.html</loc>
+  </url>
+
+  <url>
+    <loc>https://lukiirwansyah76-bot.github.io/blockchain.html</loc>
+  </url>
+
 </urlset>
