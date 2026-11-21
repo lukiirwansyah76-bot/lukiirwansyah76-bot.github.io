@@ -1,0 +1,260 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pelajari perbedaan public key dan private key, cara kerjanya dalam crypto wallet, hubungannya dengan alamat wallet, serta tips keamanan untuk pemula.">
+  <meta name="google-adsense-account" content="ca-pub-3795917704079662">
+  <title>Public Key vs Private Key: Perbedaan dan Cara Kerjanya | WEB3 VISION</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #071426;
+      color: #e8f1ff;
+      font-family: Arial, sans-serif;
+      line-height: 1.8;
+    }
+    header {
+      padding: 22px 7%;
+      background: #0c2038;
+      border-bottom: 1px solid #183d5c;
+    }
+    header a {
+      color: #39dcff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    main {
+      max-width: 850px;
+      margin: 35px auto;
+      padding: 0 22px;
+    }
+    h1, h2 { line-height: 1.35; }
+    h1 { color: #39dcff; font-size: 34px; }
+    h2 {
+      color: #39dcff;
+      margin-top: 35px;
+      font-size: 23px;
+    }
+    p, li { color: #c8d7e9; }
+    .intro {
+      font-size: 18px;
+      color: #dceaff;
+    }
+    .note {
+      background: #102b45;
+      border-left: 4px solid #39dcff;
+      padding: 15px 18px;
+      border-radius: 6px;
+      margin: 22px 0;
+    }
+    .table-wrap { overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      min-width: 450px;
+    }
+    th, td {
+      border: 1px solid #254663;
+      padding: 12px;
+      text-align: left;
+    }
+    th { background: #123451; color: #39dcff; }
+    td { color: #c8d7e9; }
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+      background: #0c2038;
+      color: #91a8c2;
+    }
+    footer a { color: #39dcff; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html">← WEB3 VISION</a>
+</header>
+
+<main>
+  <h1>Public Key vs Private Key: Perbedaan dan Cara Kerjanya dalam Crypto</h1>
+
+  <p class="intro">
+    Saat menggunakan cryptocurrency, kita akan mengenal istilah public key
+    dan private key. Keduanya merupakan bagian penting dari sistem
+    kriptografi yang membantu mengamankan aset digital dan transaksi.
+    Meskipun saling berhubungan, fungsi keduanya sangat berbeda.
+  </p>
+
+  <h2>1. Apa Itu Public Key?</h2>
+  <p>
+    Public key adalah kunci kriptografi yang dapat dibagikan kepada orang
+    lain. Dalam sistem tanda tangan digital, public key digunakan untuk
+    memverifikasi tanda tangan yang dibuat menggunakan private key
+    pasangannya.
+  </p>
+  <p>
+    Dalam ekosistem cryptocurrency, public key juga berhubungan dengan
+    pembentukan alamat wallet. Namun, alamat wallet tidak selalu sama
+    dengan public key karena pada banyak jaringan alamat dibuat melalui
+    proses pengolahan atau derivasi tertentu.
+  </p>
+
+  <h2>2. Apa Itu Private Key?</h2>
+  <p>
+    Private key adalah kunci rahasia yang digunakan untuk membuat tanda
+    tangan digital. Tanda tangan tersebut membuktikan bahwa seseorang
+    memiliki kendali atas aset atau alamat tertentu sesuai aturan jaringan.
+  </p>
+  <p>
+    Private key harus dijaga kerahasiaannya. Siapa pun yang memperoleh
+    private key dapat memiliki kemampuan untuk mengendalikan aset yang
+    terkait dengannya.
+  </p>
+
+  <div class="note">
+    <strong>Ingat:</strong> Public key boleh dibagikan sesuai kebutuhan,
+    tetapi private key tidak boleh diberikan kepada orang lain.
+    Jangan pernah mengirim private key atau seed phrase melalui chat,
+    formulir, maupun situs yang tidak terpercaya.
+  </div>
+
+  <h2>3. Perbedaan Public Key dan Private Key</h2>
+  <div class="table-wrap">
+    <table>
+      <tr>
+        <th>Aspek</th>
+        <th>Public Key</th>
+        <th>Private Key</th>
+      </tr>
+      <tr>
+        <td>Sifat</td>
+        <td>Dapat dibagikan</td>
+        <td>Harus dirahasiakan</td>
+      </tr>
+      <tr>
+        <td>Fungsi utama</td>
+        <td>Memverifikasi tanda tangan</td>
+        <td>Membuat tanda tangan digital</td>
+      </tr>
+      <tr>
+        <td>Keamanan</td>
+        <td>Tidak perlu dirahasiakan</td>
+        <td>Wajib dilindungi</td>
+      </tr>
+      <tr>
+        <td>Hubungan</td>
+        <td>Dihasilkan dari private key melalui proses kriptografi</td>
+        <td>Menjadi sumber pembentukan public key</td>
+      </tr>
+    </table>
+  </div>
+
+  <h2>4. Bagaimana Keduanya Bekerja?</h2>
+  <p>
+    Public key dan private key menggunakan sistem kriptografi asimetris.
+    Keduanya memiliki hubungan matematis, tetapi proses untuk mendapatkan
+    private key dari public key dirancang agar secara komputasi sangat
+    sulit dilakukan.
+  </p>
+  <p>
+    Ketika pengguna ingin mengirim cryptocurrency, wallet menggunakan
+    private key untuk menandatangani transaksi. Jaringan kemudian
+    memverifikasi tanda tangan tersebut menggunakan informasi public key
+    yang sesuai, berdasarkan aturan protokolnya.
+  </p>
+  <p>
+    Jika transaksi memenuhi aturan jaringan, transaksi dapat diproses
+    dan dicatat pada blockchain.
+  </p>
+
+  <h2>5. Hubungan Public Key dengan Alamat Wallet</h2>
+  <p>
+    Alamat wallet adalah identitas tujuan yang digunakan untuk menerima
+    aset digital. Pada banyak jaringan, alamat dibuat dari public key
+    melalui proses tertentu, misalnya hashing atau encoding.
+  </p>
+  <p>
+    Karena setiap blockchain dapat memiliki format dan aturan berbeda,
+    alamat wallet pada satu jaringan belum tentu dapat digunakan pada
+    jaringan lainnya.
+  </p>
+  <p>
+    Sebelum mengirim aset, selalu periksa jaringan dan alamat tujuan.
+    Kesalahan memilih jaringan atau alamat dapat menyebabkan aset
+    sulit atau tidak mungkin dipulihkan.
+  </p>
+
+  <h2>6. Apa Itu Seed Phrase?</h2>
+  <p>
+    Seed phrase adalah kumpulan kata yang digunakan dalam banyak wallet
+    untuk memulihkan akses ke wallet dan menghasilkan kembali kunci-kunci
+    kriptografi. Seed phrase bukan public key dan bukan pula sekadar
+    password biasa.
+  </p>
+  <p>
+    Siapa pun yang mengetahui seed phrase dapat berpotensi memulihkan
+    wallet dan mengendalikan aset di dalamnya. Karena itu, seed phrase
+    harus dijaga seketat private key.
+  </p>
+
+  <h2>7. Cara Menjaga Private Key Tetap Aman</h2>
+  <ul>
+    <li>Jangan pernah membagikan private key atau seed phrase.</li>
+    <li>Simpan cadangan secara offline di tempat yang aman.</li>
+    <li>Jangan memasukkan seed phrase ke situs yang tidak dikenal.</li>
+    <li>Waspadai pesan pribadi yang mengaku sebagai layanan bantuan wallet.</li>
+    <li>Gunakan perangkat yang diperbarui dan terlindungi.</li>
+    <li>Periksa alamat tujuan sebelum menyetujui transaksi.</li>
+    <li>Pertimbangkan hardware wallet untuk penyimpanan jangka panjang.</li>
+    <li>Gunakan wallet terpisah untuk aktivitas yang memiliki risiko lebih tinggi.</li>
+  </ul>
+
+  <h2>8. Kesalahan yang Sering Dilakukan Pemula</h2>
+  <ul>
+    <li>Menganggap public key dan alamat wallet selalu sama.</li>
+    <li>Membagikan private key karena mengira dibutuhkan untuk menerima aset.</li>
+    <li>Mengirim seed phrase kepada orang yang mengaku petugas dukungan.</li>
+    <li>Menyimpan informasi rahasia hanya dalam tangkapan layar di galeri.</li>
+    <li>Tidak memeriksa jaringan sebelum mengirim cryptocurrency.</li>
+  </ul>
+
+  <div class="note">
+    <strong>Tips penting:</strong> Untuk menerima cryptocurrency, umumnya
+    kamu cukup memberikan alamat wallet yang sesuai dengan jaringan aset
+    tersebut. Kamu tidak perlu memberikan private key maupun seed phrase.
+  </div>
+
+  <h2>9. Kesimpulan</h2>
+  <p>
+    Public key dan private key merupakan dua komponen penting dalam
+    kriptografi yang digunakan oleh banyak sistem cryptocurrency.
+    Public key digunakan untuk verifikasi, sedangkan private key digunakan
+    untuk membuat tanda tangan digital.
+  </p>
+  <p>
+    Memahami perbedaan keduanya membantu pengguna menjaga keamanan wallet
+    dan menghindari penipuan. Ingat, kendali atas private key dan seed
+    phrase berarti kendali atas akses ke aset digital yang terkait.
+  </p>
+
+  <p>
+    <a href="index.html" style="color:#39dcff;">
+      ← Kembali ke halaman utama WEB3 VISION
+    </a>
+  </p>
+</main>
+
+<footer>
+  <p>© 2026 WEB3 VISION. Learn • Explore • Build.</p>
+  <a href="privacy-policy.html">Privacy Policy</a> |
+  <a href="disclaimer.html">Disclaimer</a> |
+  <a href="contact.html">Contact</a>
+</footer>
+
+</body>
+</html>
