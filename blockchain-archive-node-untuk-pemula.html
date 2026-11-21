@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockchain Archive Node untuk Pemula: Pengertian, Cara Kerja, dan Fungsinya | WEB3 VISION</title>
+  <meta name="description" content="Pelajari pengertian Archive Node, cara kerja, perbedaan dengan Full Node, penyimpanan data historis blockchain, manfaat, dan kebutuhan infrastrukturnya.">
+  <meta name="google-adsense-account" content="ca-pub-3795917704079662">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #07111f;
+      color: #e6f1ff;
+      font-family: Arial, sans-serif;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 850px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #39dcff;
+      line-height: 1.4;
+    }
+    h1 { font-size: 30px; }
+    h2 {
+      margin-top: 32px;
+      font-size: 23px;
+    }
+    a { color: #39dcff; }
+    .back {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .intro, .note {
+      background: #10243a;
+      padding: 18px;
+      border-radius: 12px;
+      margin: 20px 0;
+    }
+    .note {
+      border-left: 4px solid #39dcff;
+    }
+    .comparison {
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 520px;
+    }
+    th, td {
+      border: 1px solid #29445f;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background: #15334e;
+      color: #39dcff;
+    }
+    td { background: #0d1c2d; }
+    footer {
+      margin-top: 45px;
+      padding-top: 20px;
+      border-top: 1px solid #29445f;
+      color: #9db2c8;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+<a class="back" href="index.html">← Kembali ke WEB3 VISION</a>
+
+<h1>Blockchain Archive Node untuk Pemula</h1>
+
+<p><small>Panduan edukasi Web3 untuk memahami infrastruktur dan penyimpanan data blockchain.</small></p>
+
+<div class="intro">
+  <p>Blockchain menyimpan catatan transaksi yang terus bertambah seiring waktu. Data historis ini penting untuk berbagai kebutuhan, mulai dari penelitian hingga pengembangan aplikasi Web3.</p>
+  <p>Salah satu jenis infrastruktur yang digunakan untuk mengakses data historis secara mendalam adalah <strong>Archive Node</strong>.</p>
+</div>
+
+<h2>1. Apa Itu Archive Node?</h2>
+
+<p><strong>Archive Node</strong> adalah jenis node blockchain yang menyimpan data historis secara lengkap sesuai kemampuan dan desain klien jaringan. Pada blockchain berbasis akun seperti Ethereum, Archive Node dapat menyediakan akses ke kondisi atau state dari berbagai blok sebelumnya.</p>
+
+<p>Data tersebut dapat mencakup riwayat transaksi, informasi blok, serta perubahan state yang terjadi sepanjang perjalanan blockchain.</p>
+
+<p>Archive Node sangat berguna ketika aplikasi membutuhkan informasi historis yang tidak selalu tersedia pada konfigurasi node biasa.</p>
+
+<h2>2. Mengapa Archive Node Dibutuhkan?</h2>
+
+<p>Blockchain bukan hanya tentang transaksi terbaru. Developer, peneliti, dan penyedia layanan terkadang perlu memeriksa kondisi jaringan pada waktu tertentu di masa lalu.</p>
+
+<p>Contohnya adalah mengetahui saldo sebuah akun pada blok tertentu, menganalisis aktivitas smart contract, atau membangun layanan analitik berdasarkan data historis.</p>
+
+<p>Archive Node membantu menyediakan akses terhadap informasi tersebut tanpa harus membangun ulang data historis dari sumber lain setiap kali diperlukan.</p>
+
+<h2>3. Bagaimana Cara Kerja Archive Node?</h2>
+
+<ol>
+  <li>Archive Node melakukan sinkronisasi dengan jaringan blockchain.</li>
+  <li>Node menerima blok dan data yang diperlukan sesuai protokol.</li>
+  <li>Node memproses dan memvalidasi data berdasarkan aturan klien yang digunakan.</li>
+  <li>Data historis dan informasi state disimpan agar dapat diakses kembali.</li>
+  <li>Aplikasi dapat mengirim permintaan untuk membaca informasi dari blok sebelumnya.</li>
+</ol>
+
+<p>Proses penyimpanan dan format data berbeda-beda tergantung blockchain serta perangkat lunak node yang digunakan.</p>
+
+<h2>4. Perbedaan Archive Node dan Full Node</h2>
+
+<p>Istilah Full Node dan Archive Node sering dianggap sama, padahal keduanya dapat memiliki konfigurasi penyimpanan yang berbeda.</p>
+
+<div class="comparison">
+<table>
+  <thead>
+    <tr>
+      <th>Aspek</th>
+      <th>Full Node</th>
+      <th>Archive Node</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Validasi</td>
+      <td>Memvalidasi data sesuai aturan protokol</td>
+      <td>Juga menjalankan fungsi node sesuai konfigurasi dan implementasi</td>
+    </tr>
+    <tr>
+      <td>Data historis</td>
+      <td>Dapat menggunakan pruning untuk mengurangi penyimpanan</td>
+      <td>Mempertahankan data historis yang lebih lengkap</td>
+    </tr>
+    <tr>
+      <td>Akses state lama</td>
+      <td>Dapat terbatas pada data yang masih tersedia</td>
+      <td>Dapat menyediakan akses ke state historis sesuai dukungan klien</td>
+    </tr>
+    <tr>
+      <td>Kebutuhan penyimpanan</td>
+      <td>Umumnya lebih rendah dibanding konfigurasi archive</td>
+      <td>Umumnya jauh lebih besar</td>
+    </tr>
+    <tr>
+      <td>Kegunaan</td>
+      <td>Validasi dan akses jaringan sehari-hari</td>
+      <td>Analisis dan permintaan data historis</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="note">
+  <strong>Catatan penting:</strong> Perbedaan ini bergantung pada arsitektur blockchain. Tidak semua jaringan menggunakan istilah Archive Node dengan definisi atau fitur yang sama.
+</div>
+
+<h2>5. Apa Itu Historical State?</h2>
+
+<p>Historical state adalah kondisi blockchain pada suatu titik waktu atau blok di masa lalu.</p>
+
+<p>Pada jaringan berbasis akun, informasi ini dapat mencakup saldo akun, nilai penyimpanan smart contract, dan informasi lain yang menggambarkan kondisi state pada blok tertentu.</p>
+
+<p>Data historical state dapat digunakan untuk memeriksa bagaimana kondisi sebuah akun atau kontrak berubah dari waktu ke waktu.</p>
+
+<h2>6. Manfaat Archive Node</h2>
+
+<ul>
+  <li><strong>Analisis blockchain:</strong> membantu peneliti mempelajari aktivitas jaringan pada masa lalu.</li>
+  <li><strong>Pengembangan aplikasi:</strong> menyediakan data historis untuk layanan Web3.</li>
+  <li><strong>Audit smart contract:</strong> membantu pemeriksaan aktivitas dan perubahan kontrak.</li>
+  <li><strong>Analisis akun:</strong> mendukung pemeriksaan kondisi akun pada blok tertentu.</li>
+  <li><strong>Data analytics:</strong> menjadi sumber informasi bagi dashboard dan platform analitik.</li>
+</ul>
+
+<h2>7. Kekurangan Archive Node</h2>
+
+<ul>
+  <li>Membutuhkan kapasitas penyimpanan yang besar.</li>
+  <li>Biaya perangkat keras dan operasional dapat lebih tinggi.</li>
+  <li>Sinkronisasi awal dapat memerlukan waktu dan sumber daya besar.</li>
+  <li>Membutuhkan pemeliharaan dan pemantauan secara berkala.</li>
+  <li>Tidak semua pengguna membutuhkan akses data historis selengkap ini.</li>
+</ul>
+
+<h2>8. Siapa yang Membutuhkan Archive Node?</h2>
+
+<p>Archive Node biasanya lebih relevan bagi:</p>
+
+<ul>
+  <li>Developer yang membangun aplikasi berbasis data historis.</li>
+  <li>Platform analitik blockchain.</li>
+  <li>Peneliti dan analis on-chain.</li>
+  <li>Penyedia infrastruktur dan layanan data Web3.</li>
+  <li>Tim yang membutuhkan akses ke state historis untuk kebutuhan teknis.</li>
+</ul>
+
+<p>Pengguna biasa yang hanya mengirim dan menerima aset digital umumnya tidak membutuhkan Archive Node sendiri.</p>
+
+<h2>9. Apakah Archive Node Memvalidasi Transaksi?</h2>
+
+<p>Archive Node dapat menjalankan fungsi validasi node sesuai implementasi klien dan aturan jaringan. Namun, istilah Archive Node terutama menjelaskan kemampuan penyimpanan dan akses data historis, bukan peran konsensus seperti validator.</p>
+
+<p>Karena itu, Archive Node tidak otomatis berarti validator dan tidak otomatis memperoleh reward staking.</p>
+
+<h2>10. Apakah Archive Node Sama di Semua Blockchain?</h2>
+
+<p>Tidak. Setiap blockchain memiliki arsitektur penyimpanan, mekanisme sinkronisasi, dan cara mengakses data historis yang berbeda.</p>
+
+<p>Beberapa jaringan menggunakan istilah archive untuk node yang mempertahankan riwayat state. Jaringan lain dapat menyediakan data historis melalui mekanisme atau layanan yang berbeda.</p>
+
+<p>Sebelum menjalankan Archive Node, penting untuk memeriksa dokumentasi resmi blockchain dan perangkat lunak klien yang digunakan.</p>
+
+<h2>11. Kesimpulan</h2>
+
+<p>Archive Node merupakan bagian penting dari infrastruktur blockchain ketika dibutuhkan akses terhadap data historis secara mendalam.</p>
+
+<p>Dibandingkan Full Node yang menggunakan pruning pada konfigurasi tertentu, Archive Node dapat mempertahankan data historis dan state lama dengan kebutuhan penyimpanan yang lebih besar.</p>
+
+<p>Memahami Archive Node membantu kita mengenali bagaimana data blockchain disimpan, diakses, dan dimanfaatkan untuk membangun ekosistem Web3.</p>
+
+<div class="note">
+  <strong>Pelajari Web3 bersama WEB3 VISION.</strong>
+  <p>Explore Web3. Connect the Future. Build Opportunities.</p>
+  <a href="index.html">Kunjungi halaman utama WEB3 VISION →</a>
+</div>
+
+<footer>
+  <p>© 2026 WEB3 VISION. Educational content for informational purposes only.</p>
+  <p>
+    <a href="about.html">About</a> |
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="disclaimer.html">Disclaimer</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="editorial-policy.html">Editorial Policy</a>
+  </p>
+</footer>
+
+</div>
+</body>
+</html>
