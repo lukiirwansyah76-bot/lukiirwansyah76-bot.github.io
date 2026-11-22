@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockchain Network Scalability Metrics untuk Pemula: TPS, Throughput, Latency, dan Finality</title>
+  <meta name="description" content="Pelajari metrik skalabilitas blockchain seperti TPS, throughput, latency, finality, biaya transaksi, dan penggunaan sumber daya jaringan.">
+  <meta name="google-adsense-account" content="ca-pub-3795917704079662">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #07111f;
+      color: #e8f1ff;
+      font-family: Arial, sans-serif;
+      line-height: 1.8;
+    }
+    main {
+      max-width: 850px;
+      margin: 30px auto;
+      padding: 28px;
+      background: #101f33;
+      border: 1px solid #1c3b59;
+      border-radius: 14px;
+    }
+    h1, h2 { color: #39dcff; line-height: 1.4; }
+    h1 { font-size: 30px; }
+    h2 { margin-top: 30px; font-size: 22px; }
+    p, li { color: #d2deed; }
+    a { color: #39dcff; }
+    .note {
+      padding: 15px;
+      background: #142b43;
+      border-left: 4px solid #39dcff;
+      border-radius: 7px;
+    }
+    footer {
+      max-width: 850px;
+      margin: 25px auto;
+      text-align: center;
+      color: #9fb2c9;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">← Kembali ke Beranda WEB3 VISION</a></p>
+
+  <h1>Blockchain Network Scalability Metrics untuk Pemula</h1>
+
+  <p>Bagaimana cara mengetahui apakah sebuah jaringan blockchain mampu menangani banyak transaksi? Untuk menjawab pertanyaan tersebut, kita membutuhkan metrik atau ukuran performa jaringan.</p>
+
+  <p>Scalability metrics membantu pengembang, operator node, dan pengguna memahami kapasitas pemrosesan, kecepatan konfirmasi, biaya transaksi, serta kebutuhan sumber daya sebuah blockchain.</p>
+
+  <h2>1. Apa Itu Blockchain Network Scalability Metrics?</h2>
+
+  <p>Blockchain Network Scalability Metrics adalah kumpulan ukuran yang digunakan untuk mengevaluasi kemampuan jaringan blockchain dalam menangani peningkatan jumlah pengguna, transaksi, dan aktivitas aplikasi.</p>
+
+  <p>Metrik ini membantu mengidentifikasi hambatan jaringan serta menilai dampak dari perubahan protokol, infrastruktur, atau teknologi skalabilitas.</p>
+
+  <h2>2. Transactions Per Second (TPS)</h2>
+
+  <p>Transactions Per Second atau TPS adalah jumlah transaksi yang diproses dalam satu detik pada kondisi pengukuran tertentu.</p>
+
+  <p>Contohnya, jika sebuah jaringan memproses rata-rata 100 transaksi dalam satu detik selama periode pengamatan, nilai TPS pada periode tersebut adalah 100.</p>
+
+  <p>TPS berguna untuk memahami kapasitas pemrosesan, tetapi angka TPS saja tidak cukup untuk menilai kualitas jaringan. Jenis transaksi, tingkat keberhasilan, kondisi jaringan, dan metode pengukuran juga perlu diperhatikan.</p>
+
+  <h2>3. Throughput</h2>
+
+  <p>Throughput menggambarkan jumlah pekerjaan atau data yang berhasil diproses dalam periode tertentu.</p>
+
+  <p>Dalam blockchain, throughput dapat dinyatakan sebagai transaksi berhasil per detik atau jumlah data yang diproses dalam satuan waktu.</p>
+
+  <p>Perbedaan pentingnya adalah TPS biasanya berfokus pada jumlah transaksi per detik, sedangkan throughput dapat memiliki cakupan pengukuran yang lebih luas.</p>
+
+  <h2>4. Network Latency</h2>
+
+  <p>Latency adalah waktu yang dibutuhkan suatu informasi untuk berpindah atau diproses dari satu titik ke titik lainnya.</p>
+
+  <p>Dalam jaringan blockchain, latency dapat muncul ketika transaksi dikirim, disebarkan ke node lain, atau ketika node berkomunikasi untuk mencapai kesepakatan.</p>
+
+  <p>Latency yang lebih rendah dapat membantu meningkatkan responsivitas jaringan, tetapi tidak selalu berarti transaksi langsung mencapai finality.</p>
+
+  <h2>5. Transaction Confirmation Time</h2>
+
+  <p>Transaction Confirmation Time adalah waktu yang dibutuhkan sampai transaksi memperoleh konfirmasi sesuai aturan blockchain.</p>
+
+  <p>Pengukuran ini penting karena pengguna ingin mengetahui berapa lama transaksi mereka diproses dan diakui oleh jaringan.</p>
+
+  <p>Definisi konfirmasi dapat berbeda antarjaringan. Pada beberapa blockchain, satu konfirmasi belum tentu berarti transaksi tidak dapat dibatalkan.</p>
+
+  <h2>6. Finality Time</h2>
+
+  <p>Finality adalah kondisi ketika transaksi atau blok dianggap telah mencapai tingkat kepastian final sesuai mekanisme konsensus blockchain.</p>
+
+  <p>Finality Time mengukur waktu yang diperlukan untuk mencapai kondisi tersebut.</p>
+
+  <p>Finality perlu dibedakan dari sekadar waktu konfirmasi. Pada sistem tertentu, transaksi dapat terlihat terkonfirmasi sebelum mencapai finality yang diharapkan.</p>
+
+  <h2>7. Block Time dan Block Size</h2>
+
+  <p><strong>Block Time</strong> adalah waktu rata-rata atau target waktu antara pembuatan blok, bergantung pada desain blockchain.</p>
+
+  <p><strong>Block Size</strong> menggambarkan ukuran maksimum atau batas data blok sesuai aturan protokol. Pada beberapa jaringan, kapasitas blok tidak hanya ditentukan oleh ukuran byte, tetapi juga oleh batas penggunaan sumber daya atau gas.</p>
+
+  <p>Kedua metrik ini dapat memengaruhi jumlah transaksi yang dapat dimasukkan ke dalam blok dan frekuensi blok diproduksi.</p>
+
+  <h2>8. Transaction Cost atau Gas Fee</h2>
+
+  <p>Transaction Cost adalah biaya yang dibutuhkan untuk menjalankan transaksi pada jaringan blockchain.</p>
+
+  <p>Ketika permintaan ruang blok meningkat, biaya transaksi dapat ikut meningkat pada jaringan yang menggunakan mekanisme pasar biaya.</p>
+
+  <p>Biaya yang lebih rendah dapat membantu pengalaman pengguna, tetapi perlu dinilai bersama keamanan, kapasitas, dan keberlanjutan ekonomi jaringan.</p>
+
+  <h2>9. Resource Utilization</h2>
+
+  <p>Resource Utilization mengukur penggunaan sumber daya infrastruktur blockchain, seperti CPU, RAM, disk, dan bandwidth.</p>
+
+  <ul>
+    <li><strong>CPU Usage:</strong> Mengukur pemakaian kemampuan pemrosesan komputer.</li>
+    <li><strong>Memory Usage:</strong> Mengukur penggunaan RAM oleh node dan layanan pendukung.</li>
+    <li><strong>Disk I/O:</strong> Mengamati aktivitas membaca dan menulis data pada penyimpanan.</li>
+    <li><strong>Bandwidth:</strong> Mengukur kapasitas komunikasi data melalui jaringan.</li>
+  </ul>
+
+  <p>Metrik ini membantu operator mengetahui apakah infrastruktur masih memiliki kapasitas untuk menangani peningkatan beban.</p>
+
+  <h2>10. Uptime dan Reliability</h2>
+
+  <p>Uptime menunjukkan persentase waktu ketika sebuah layanan atau node tersedia dan dapat beroperasi.</p>
+
+  <p>Reliability menggambarkan kemampuan sistem untuk menjalankan fungsinya secara konsisten dalam kondisi tertentu.</p>
+
+  <p>Jaringan yang memiliki throughput tinggi tetapi sering mengalami gangguan belum tentu memberikan pengalaman yang baik kepada pengguna.</p>
+
+  <h2>11. Cara Mengukur Skalabilitas Blockchain</h2>
+
+  <p>Pengukuran skalabilitas sebaiknya dilakukan dengan metode yang konsisten. Beberapa langkah yang dapat digunakan adalah:</p>
+
+  <ol>
+    <li>Tentukan metrik yang ingin dievaluasi.</li>
+    <li>Gunakan lingkungan pengujian yang sesuai dan terdokumentasi.</li>
+    <li>Catat jumlah transaksi yang berhasil diproses.</li>
+    <li>Ukur latency dan waktu konfirmasi selama pengujian.</li>
+    <li>Amati biaya transaksi dan penggunaan sumber daya.</li>
+    <li>Ulangi pengujian dengan tingkat beban berbeda.</li>
+    <li>Bandingkan hasil menggunakan kondisi dan metode yang sama.</li>
+  </ol>
+
+  <h2>12. Mengapa Satu Metrik Tidak Cukup?</h2>
+
+  <p>Menilai blockchain hanya berdasarkan TPS dapat menghasilkan kesimpulan yang kurang lengkap. Sebuah jaringan mungkin memiliki throughput tinggi, tetapi membutuhkan sumber daya besar atau memiliki latency yang tinggi.</p>
+
+  <p>Karena itu, evaluasi perlu menggabungkan beberapa metrik, seperti TPS, throughput, latency, finality, biaya transaksi, uptime, dan resource utilization.</p>
+
+  <div class="note">
+    <strong>Catatan:</strong> Angka performa blockchain perlu dibaca berdasarkan kondisi pengujian, jenis transaksi, periode pengamatan, serta sumber data. Jangan membandingkan angka dari metode pengukuran yang berbeda tanpa memahami konteksnya.
+  </div>
+
+  <h2>13. Kesimpulan</h2>
+
+  <p>Blockchain Network Scalability Metrics membantu kita memahami kemampuan jaringan dalam menangani peningkatan aktivitas. Metrik penting meliputi TPS, throughput, latency, confirmation time, finality time, block time, transaction cost, dan penggunaan sumber daya.</p>
+
+  <p>Dengan memahami metrik tersebut, pemula dapat mengevaluasi performa blockchain secara lebih menyeluruh dan tidak hanya terpaku pada satu angka.</p>
+
+  <h2>14. Pelajari Topik Web3 Lainnya</h2>
+
+  <p>Jelajahi berbagai panduan blockchain dan Web3 lainnya di <a href="index.html">WEB3 VISION</a> untuk memperluas pemahaman tentang teknologi terdesentralisasi.</p>
+
+  <p class="note">WEB3 VISION — Explore Web3. Connect the Future. Build Opportunities.</p>
+</main>
+
+<footer>
+  <p>© 2026 WEB3 VISION. Educational content for Web3 learners.</p>
+  <p>
+    <a href="about.html">About</a> |
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="disclaimer.html">Disclaimer</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="editorial-policy.html">Editorial Policy</a>
+  </p>
+</footer>
+</body>
+</html>
