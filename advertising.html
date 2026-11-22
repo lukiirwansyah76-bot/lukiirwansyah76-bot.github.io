@@ -196,7 +196,16 @@ form.addEventListener("submit", async function(event) {
     alert("Pengajuan gagal: " + error.message);
     return;
   }
+const { error: emailError } = await supabaseClient.functions.invoke(
+  "send-ad-notification",
+  {
+    body: campaign
+  }
+);
 
+if (emailError) {
+  console.error("Notifikasi email gagal:", emailError);
+    }
   alert("Pengajuan berhasil dikirim! Tim WEB3 VISION akan meninjau kampanye Anda.");
   form.reset();
 });
