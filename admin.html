@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Dashboard - WEB3 VISION</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+body{margin:0;background:#080d18;color:#fff;font-family:Arial,sans-serif;padding:20px}
+.container{max-width:900px;margin:30px auto}
+.card{background:#111c2e;border:1px solid #263750;border-radius:14px;padding:22px;margin-bottom:18px}
+h1,h2{color:#55d6ff}
+input{box-sizing:border-box;width:100%;padding:13px;margin:9px 0;background:#080d18;color:white;border:1px solid #40516c;border-radius:7px}
+button{padding:11px 16px;border:0;border-radius:7px;cursor:pointer;font-weight:bold;margin:5px}
+.primary{background:#16b8e8;color:#06111b}
+.approve{background:#16a36a;color:white}
+.reject{background:#d74747;color:white}
+.muted{color:#aab8cc}
+.campaign{border-top:1px solid #34445d;padding:16px 0}
+#dashboard{display:none}
+#message{color:#ffd166;white-space:pre-wrap}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>WEB3 VISION</h1>
+<p class="muted">Administrator Control Panel</p>
+
+<section id="login" class="card">
+<h2>Admin Login</h2>
+<input id="email" type="email" placeholder="Email administrator">
+<input id="password" type="password" placeholder="Password">
+<button class="primary" onclick="loginAdmin()">LOGIN</button>
+<p id="message"></p>
+</section>
+
+<section id="dashboard">
+<div class="card">
+<h2>Dashboard Iklan</h2>
+<p>Selamat datang, Administrator.</p>
+<button class="primary" onclick="loadCampaigns()">Muat Ulang Data</button>
+<button onclick="logoutAdmin()">Logout</button>
+<p id="status" class="muted"></p>
+</div>
+<div class="card">
+<h2>Daftar Pengajuan Iklan</h2>
+<div id="campaignList">Memuat data...</div>
+</div>
+</section>
+</div>
+
+<script>
+const SUPABASE_URL = "https://gtedobyfhytzjmsqmnpi.supabase.co";
+const SUPABASE_KEY = "sb_publishable_6YRDYNz-_jgPrltSAJxBXQ_ue0VDoJi";
+
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY
+);
+
+const loginBox = document.getElementById("login");
+const dashboard = document.getElementById("dashboard");
+const message = document.getElementById("message");
+
+function safe(value) {
+  return String(value ?? "").replace(/[&<>"']/g, char => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",
+    '"':"&quot;","'":"&#39;"
+  })[char]);
+}
+
+async function checkAdmin() {
+  const {data:{session}} = await supabaseClient.auth.getSession();
+  if (!session) return;
+
+  const {data, error} = await supabaseClient.rpc("is_web3_admin");
+
+  if (error || data !== true) {
+    await supabaseClient.auth.signOut();
+    message.textContent = "Akun ini tidak memiliki akses administrator.";
+    return;
+  }
+
+  loginBox.style.display = "none";
+  dashboard.style.display = "block";
+  loadCampaigns();
+}
+
+async function loginAdmin() {
+  message.textContent = "Memeriksa akun...";
+
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+
+  if (!email || !password) {
+    message.textContent = "Isi email dan password terlebih dahulu.";
+    return;
+  }
+
+  const {error} = await supabaseClient.auth.signInWithPassword({
+    email, password
+  });
+
+  if (error) {
+    message.textContent = "Login gagal: " + error.message;
+    return;
+  }
+
+  await checkAdmin();
+}
+
+async function loadCampaigns() {
+  const list = document.getElementById("campaignList");
+  const status = document.getElementById("status");
+  list.textContent = "Memuat data pengajuan...";
+
+  const {data, error} = await supabaseClient
+    .from("ad_campaigns")
+    .select("*")
+    .order("created_at", {ascending:false});
+
+  if (error) {
+    list.textContent = "Gagal memuat data: " + error.message;
+    return;
+  }
+
+  status.textContent = "Total pengajuan: " + data.length;
+
+  if (!data.length) {
+    list.textContent = "Belum ada pengajuan iklan.";
+    return;
+  }
+
+  list.innerHTML = data.map(ad => `
+    <div class="campaign">
+      <h3>${safe(ad.brand_name || ad.advertiser_name)}</h3>
+      <p><b>Pengiklan:</b> ${safe(ad.advertiser_name)}</p>
+      <p><b>Jenis promosi:</b> ${safe(ad.promotion_type)}</p>
+      <p><b>Website:</b> ${safe(ad.website_url)}</p>
+      <p><b>Anggaran:</b> Rp${safe(ad.budget)}</p>
+      <p><b>Pesan:</b> ${safe(ad.message)}</p>
+      <p><b>Status:</b> ${safe(ad.status)}</p>
+      <p><b>Tanggal:</b> ${safe(ad.created_at)}</p>
+      ${ad.banner_url ? `<p><b>Banner:</b> ${safe(ad.banner_url)}</p>` : ""}
+      ${ad.target_url ? `<p><b>Target:</b> ${safe(ad.target_url)}</p>` : ""}
+      <button class="approve" onclick="updateStatus('${ad.id}','approved')">SETUJUI</button>
+      <button class="reject" onclick="updateStatus('${ad.id}','rejected')">TOLAK</button>
+    </div>
+  `).join("");
+}
+
+async function updateStatus(id, newStatus) {
+  if (!confirm("Ubah status pengajuan menjadi " + newStatus + "?")) return;
+
+  const {error} = await supabaseClient
+    .from("ad_campaigns")
+    .update({status:newStatus})
+    .eq("id",id);
+
+  if (error) {
+    alert("Gagal mengubah status: " + error.message);
+    return;
+  }
+
+  alert("Status berhasil diperbarui.");
+  loadCampaigns();
+}
+
+async function logoutAdmin() {
+  await supabaseClient.auth.signOut();
+  dashboard.style.display = "none";
+  loginBox.style.display = "block";
+  message.textContent = "Anda sudah logout.";
+}
+
+checkAdmin();
+</script>
+</body>
+</html>
