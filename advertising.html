@@ -197,7 +197,7 @@ form.addEventListener("submit", async function(event) {
     return;
   }
 const { error: emailError } = await supabaseClient.functions.invoke(
-  "send-ad-notification",
+  "swift-endpoint",
   {
     body: campaign
   }
