@@ -1160,5 +1160,70 @@ Advertise With Us
 </p>
   </footer>
 
-</body>
+
+<section id="web3-vision-ads" style="max-width:1100px;margin:30px auto;padding:20px;background:#101b2d;border-radius:14px;color:white;">
+  <h2 style="color:#55d6ff;">Sponsored Web3 Projects</h2>
+  <div id="web3-ads-list">Memuat iklan...</div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(async function () {
+  const client = window.supabase.createClient(
+    "https://gtedobyfhytzjmsqmnpi.supabase.co",
+    "sb_publishable_6YRDYNz-_jgPrltSAJxBXQ_ue0VDoJi"
+  );
+
+  const container = document.getElementById("web3-ads-list");
+
+  const { data, error } = await client
+    .from("ad_campaigns")
+    .select("id,brand_name,banner_url,target_url")
+    .eq("status", "approved")
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    container.textContent = "Iklan belum dapat dimuat.";
+    console.error(error);
+    return;
+  }
+
+  if (!data || data.length === 0) {
+    container.textContent = "Belum ada iklan aktif.";
+    return;
+  }
+
+  container.innerHTML = data.map(ad => {
+    const brand = String(ad.brand_name || "Web3 Project")
+      .replace(/[&<>"']/g, c => ({
+        "&":"&amp;","<":"&lt;",">":"&gt;",
+        '"':"&quot;","'":"&#39;"
+      })[c]);
+
+    const banner = String(ad.banner_url || "").trim();
+    const target = String(ad.target_url || "").trim();
+
+    if (!/^https:\/\//i.test(target)) {
+      return "";
+    }
+
+    const image = /^https:\/\//i.test(banner)
+      ? `<img src="${banner.replace(/"/g, "%22")}" alt="${brand}" style="width:100%;max-height:220px;object-fit:contain;border-radius:10px;">`
+      : `<div style="padding:25px;background:#172a43;border-radius:10px;">${brand}</div>`;
+
+    return `
+      <a href="${target.replace(/"/g, "%22")}" target="_blank" rel="noopener noreferrer"
+         style="display:block;margin:15px 0;padding:12px;background:#172a43;border-radius:12px;color:white;text-decoration:none;">
+        ${image}
+        <p style="font-weight:bold;margin:10px 0 0;">${brand}</p>
+      </a>
+    `;
+  }).join("");
+
+  if (!container.innerHTML.trim()) {
+    container.textContent = "Belum ada iklan dengan tautan tujuan yang valid.";
+  }
+})();
+</script>
+/body>
 </html>
