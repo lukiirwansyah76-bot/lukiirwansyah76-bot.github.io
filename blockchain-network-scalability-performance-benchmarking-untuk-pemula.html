@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockchain Network Scalability Performance Benchmarking untuk Pemula</title>
+  <meta name="description" content="Pelajari performance benchmarking blockchain, throughput, latency, TPS, beban jaringan, metode pengujian, dan cara mengevaluasi skalabilitas jaringan.">
+  <meta name="google-adsense-account" content="ca-pub-3795917704079662">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #071426;
+      color: #eaf4ff;
+      font-family: Arial, sans-serif;
+      line-height: 1.8;
+    }
+    main {
+      max-width: 850px;
+      margin: auto;
+    }
+    h1, h2 {
+      color: #39dcff;
+      line-height: 1.4;
+    }
+    a {
+      color: #39dcff;
+    }
+    .content {
+      background: #10233d;
+      padding: 22px;
+      border-radius: 12px;
+    }
+    .note {
+      background: #163451;
+      padding: 14px;
+      border-left: 4px solid #39dcff;
+      border-radius: 6px;
+    }
+    footer {
+      margin-top: 35px;
+      padding-top: 20px;
+      border-top: 1px solid #29415c;
+      color: #a9bfd5;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <p><a href="index.html">← Kembali ke WEB3 VISION</a></p>
+
+  <h1>Blockchain Network Scalability Performance Benchmarking untuk Pemula</h1>
+
+  <p>
+    Memahami skalabilitas blockchain tidak cukup hanya dengan melihat klaim
+    kecepatan transaksi. Kita perlu menguji performa jaringan menggunakan
+    metode yang terukur. Proses pengujian tersebut dikenal sebagai
+    performance benchmarking.
+  </p>
+
+  <div class="content">
+    <h2>1. Apa Itu Performance Benchmarking?</h2>
+    <p>
+      Performance benchmarking adalah proses mengukur dan mengevaluasi
+      kinerja suatu sistem berdasarkan skenario pengujian dan metrik
+      tertentu. Dalam blockchain, benchmarking membantu memahami kemampuan
+      jaringan ketika memproses transaksi dengan berbagai tingkat beban.
+    </p>
+
+    <h2>2. Mengapa Benchmarking Penting untuk Blockchain?</h2>
+    <p>Benchmarking dapat membantu pengembang dan operator jaringan untuk:</p>
+    <ul>
+      <li>Mengukur kemampuan pemrosesan transaksi.</li>
+      <li>Mengetahui waktu yang dibutuhkan transaksi untuk diproses.</li>
+      <li>Mengidentifikasi hambatan performa.</li>
+      <li>Membandingkan konfigurasi atau versi perangkat lunak.</li>
+      <li>Mengevaluasi dampak peningkatan kapasitas jaringan.</li>
+    </ul>
+
+    <h2>3. Metrik Utama dalam Benchmarking</h2>
+
+    <h3>Throughput</h3>
+    <p>
+      Throughput menunjukkan jumlah transaksi atau pekerjaan yang berhasil
+      diproses dalam periode tertentu. Nilainya dapat dinyatakan dalam
+      transaksi per detik atau satuan lain sesuai jenis pengujian.
+    </p>
+
+    <h3>Latency</h3>
+    <p>
+      Latency adalah waktu yang diperlukan untuk menyelesaikan suatu proses.
+      Pengukuran perlu menjelaskan titik awal dan akhir, misalnya dari
+      pengiriman transaksi hingga transaksi dimasukkan ke dalam blok.
+    </p>
+
+    <h3>Transactions Per Second (TPS)</h3>
+    <p>
+      TPS menggambarkan jumlah transaksi per detik. Angka TPS harus
+      disertai informasi kondisi pengujian karena hasilnya dapat berbeda
+      tergantung jenis transaksi, perangkat keras, dan konfigurasi jaringan.
+    </p>
+
+    <h3>Resource Utilization</h3>
+    <p>
+      Penggunaan CPU, memori, storage, disk I/O, dan bandwidth membantu
+      menjelaskan sumber daya yang dibutuhkan jaringan untuk mencapai
+      performa tertentu.
+    </p>
+
+    <h2>4. Metode Pengujian Benchmarking</h2>
+    <ul>
+      <li>
+        <strong>Load Testing:</strong> Menguji jaringan dengan beban transaksi
+        yang telah ditentukan.
+      </li>
+      <li>
+        <strong>Stress Testing:</strong> Meningkatkan beban secara bertahap
+        untuk mengetahui batas kemampuan sistem.
+      </li>
+      <li>
+        <strong>Endurance Testing:</strong> Mengamati kestabilan performa
+        dalam periode pengujian yang panjang.
+      </li>
+      <li>
+        <strong>Scalability Testing:</strong> Mengukur perubahan performa
+        ketika kapasitas atau jumlah sumber daya ditingkatkan.
+      </li>
+    </ul>
+
+    <h2>5. Tahapan Melakukan Benchmarking</h2>
+    <ol>
+      <li>Tentukan tujuan dan metrik yang akan diukur.</li>
+      <li>Catat spesifikasi perangkat keras dan perangkat lunak.</li>
+      <li>Siapkan lingkungan pengujian yang konsisten.</li>
+      <li>Tentukan jenis transaksi dan pola beban.</li>
+      <li>Jalankan pengujian dengan beberapa tingkat beban.</li>
+      <li>Catat throughput, latency, dan penggunaan sumber daya.</li>
+      <li>Ulangi pengujian untuk memeriksa konsistensi hasil.</li>
+      <li>Analisis hasil dan dokumentasikan keterbatasannya.</li>
+    </ol>
+
+    <h2>6. Faktor yang Memengaruhi Hasil Benchmarking</h2>
+    <p>
+      Hasil pengujian dapat dipengaruhi oleh spesifikasi server, kondisi
+      jaringan, jumlah node, konfigurasi validator, ukuran blok, jenis
+      transaksi, mekanisme konsensus, serta kondisi perangkat lunak.
+    </p>
+    <p>
+      Karena itu, perbandingan dua blockchain harus menggunakan skenario
+      pengujian yang sebanding. Membandingkan angka TPS dari pengujian
+      berbeda tanpa memahami metodenya dapat menghasilkan kesimpulan
+      yang keliru.
+    </p>
+
+    <h2>7. Memahami Hasil Benchmarking</h2>
+    <p>
+      Hasil benchmarking sebaiknya tidak hanya menampilkan satu angka
+      tertinggi. Evaluasi juga perlu melihat kestabilan throughput,
+      distribusi latency seperti persentil ke-95, tingkat kegagalan
+      transaksi, dan konsumsi sumber daya.
+    </p>
+    <p>
+      Pengujian pada jaringan lokal atau testnet juga belum tentu
+      menggambarkan performa jaringan utama dalam kondisi penggunaan nyata.
+    </p>
+
+    <h2>8. Tantangan Performance Benchmarking</h2>
+    <ul>
+      <li>Menciptakan lingkungan pengujian yang konsisten.</li>
+      <li>Menentukan pola transaksi yang mewakili penggunaan nyata.</li>
+      <li>Menghindari hasil yang hanya mencerminkan kondisi terbaik.</li>
+      <li>Memisahkan waktu eksekusi, konfirmasi, dan finalitas transaksi.</li>
+      <li>Memastikan hasil dapat diulang dan diverifikasi.</li>
+    </ul>
+
+    <h2>9. Kesimpulan</h2>
+    <p>
+      Performance benchmarking merupakan bagian penting dalam evaluasi
+      skalabilitas blockchain. Dengan mengukur throughput, latency, TPS,
+      dan penggunaan sumber daya melalui metode yang konsisten, kita dapat
+      memahami kemampuan serta keterbatasan suatu jaringan secara lebih
+      objektif.
+    </p>
+
+    <div class="note">
+      <strong>Catatan:</strong> Angka benchmark bukan jaminan performa
+      jaringan dalam semua kondisi. Selalu perhatikan metode, lingkungan,
+      dan skenario pengujian sebelum menarik kesimpulan.
+    </div>
+  </div>
+
+  <footer>
+    <p>WEB3 VISION — Explore Web3. Connect the Future. Build Opportunities.</p>
+    <p>
+      <a href="about.html">About</a> |
+      <a href="privacy-policy.html">Privacy Policy</a> |
+      <a href="disclaimer.html">Disclaimer</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+    <p>© 2026 WEB3 VISION. All rights reserved.</p>
+  </footer>
+</main>
+</body>
+</html>
