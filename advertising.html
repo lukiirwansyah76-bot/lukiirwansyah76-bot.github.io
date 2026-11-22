@@ -107,8 +107,8 @@ footer{text-align:center;padding:30px 0;border-top:1px solid #233651;margin-top:
 <h2>Ajukan Kampanye Iklan</h2>
 <p>Isi formulir berikut untuk mengajukan promosi bersama WEB3 VISION.</p>
 
-<form action="mailto:Webvision103@gmail.com" method="post" enctype="text/plain">
-
+<form id="adCampaignForm">
+  
 <label>Nama Pengiklan</label>
 <input type="text" name="Nama Pengiklan" required placeholder="Nama Anda">
 
@@ -155,5 +155,51 @@ footer{text-align:center;padding:30px 0;border-top:1px solid #233651;margin-top:
 <a href="index.html">Kembali ke Beranda</a>
 </div>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const supabaseClient = window.supabase.createClient(
+  "https://gtedobyfhytzjmsqmnpi.supabase.co",
+  "sb_publishable_6YRDYNz-_jgPrltSAJxBXQ_ue0VDoJi"
+);
+
+const form = document.getElementById("adCampaignForm");
+
+form.addEventListener("submit", async function(event) {
+  event.preventDefault();
+
+  const button = form.querySelector('button[type="submit"]');
+  button.disabled = true;
+  button.textContent = "Mengirim...";
+
+  const data = new FormData(form);
+
+  const campaign = {
+    advertiser_name: data.get("Nama Pengiklan"),
+    brand_name: data.get("Brand atau Proyek"),
+    promotion_type: data.get("Jenis Promosi"),
+    website_url: data.get("Link") || null,
+    budget: data.get("Anggaran"),
+    message: data.get("Pesan") || null,
+    status: "pending"
+  };
+
+  const { error } = await supabaseClient
+    .from("ad_campaigns")
+    .insert([campaign]);
+
+  button.disabled = false;
+  button.textContent = "Kirim Permintaan Iklan";
+
+  if (error) {
+    alert("Pengajuan gagal: " + error.message);
+    return;
+  }
+
+  alert("Pengajuan berhasil dikirim! Tim WEB3 VISION akan meninjau kampanye Anda.");
+  form.reset();
+});
+</script>
 </body>
 </html>
