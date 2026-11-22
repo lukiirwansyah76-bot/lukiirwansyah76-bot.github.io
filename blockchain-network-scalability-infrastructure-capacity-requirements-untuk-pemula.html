@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockchain Network Scalability Infrastructure Capacity Requirements untuk Pemula</title>
+  <meta name="description" content="Pelajari kebutuhan kapasitas infrastruktur blockchain, CPU, RAM, storage, bandwidth, kapasitas node, dan perencanaan pertumbuhan jaringan.">
+  <meta name="google-adsense-account" content="ca-pub-3795917704079662">
+  <meta name="keywords" content="Blockchain Infrastructure Capacity, Node Capacity, CPU, RAM, Storage, Bandwidth, Scalability, Web3">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #07111f;
+      color: #e6f1ff;
+      font-family: Arial, sans-serif;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 850px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #39dcff;
+      line-height: 1.4;
+    }
+    h1 { font-size: 30px; }
+    h2 {
+      margin-top: 32px;
+      border-bottom: 1px solid #183b56;
+      padding-bottom: 8px;
+    }
+    p, li { color: #c5d4e5; }
+    a { color: #39dcff; }
+    .intro, .content-box {
+      background: #101f32;
+      border: 1px solid #1b3d59;
+      border-radius: 12px;
+      padding: 18px;
+      margin: 20px 0;
+    }
+    .highlight {
+      color: #39dcff;
+      font-weight: bold;
+    }
+    .back {
+      display: inline-block;
+      margin-bottom: 20px;
+      text-decoration: none;
+    }
+    footer {
+      margin-top: 45px;
+      padding-top: 20px;
+      border-top: 1px solid #24415a;
+      color: #91a8bd;
+      font-size: 14px;
+    }
+    @media (max-width: 600px) {
+      body { padding: 15px; }
+      h1 { font-size: 25px; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <a class="back" href="index.html">← Kembali ke WEB3 VISION</a>
+
+  <h1>Blockchain Network Scalability Infrastructure Capacity Requirements untuk Pemula</h1>
+
+  <div class="intro">
+    <p>
+      Skalabilitas blockchain tidak hanya bergantung pada desain protokol
+      dan mekanisme konsensus. Infrastruktur yang menjalankan jaringan
+      juga harus memiliki kapasitas yang memadai untuk menangani
+      peningkatan aktivitas.
+    </p>
+    <p>
+      Infrastructure Capacity Requirements membahas kapasitas sumber
+      daya yang diperlukan oleh infrastruktur blockchain, mulai dari
+      CPU, RAM, storage, hingga bandwidth. Perencanaan kapasitas membantu
+      operator memahami kemampuan sistem dan mempersiapkan pertumbuhan
+      jaringan secara terukur.
+    </p>
+  </div>
+
+  <h2>1. Apa Itu Infrastructure Capacity Requirements?</h2>
+  <p>
+    Infrastructure Capacity Requirements adalah kebutuhan kapasitas
+    komputasi, memori, penyimpanan, dan jaringan yang harus tersedia
+    agar infrastruktur dapat menjalankan beban kerjanya.
+  </p>
+  <p>
+    Kapasitas berbeda dengan penggunaan sumber daya. Kapasitas
+    menunjukkan kemampuan yang tersedia, sedangkan penggunaan
+    menunjukkan bagian dari kemampuan tersebut yang sedang dipakai.
+  </p>
+
+  <h2>2. Mengapa Perencanaan Kapasitas Penting?</h2>
+  <ul>
+    <li><strong>Menjaga performa:</strong> menyediakan kapasitas yang sesuai dengan beban kerja.</li>
+    <li><strong>Mendukung pertumbuhan:</strong> mempersiapkan peningkatan transaksi dan data.</li>
+    <li><strong>Menghindari bottleneck:</strong> mengurangi risiko keterbatasan komponen.</li>
+    <li><strong>Mengendalikan biaya:</strong> mencegah kapasitas berlebihan atau terlalu rendah.</li>
+    <li><strong>Menjaga keandalan:</strong> menyediakan ruang cadangan untuk kondisi tidak terduga.</li>
+  </ul>
+
+  <h2>3. Kapasitas CPU</h2>
+  <p>
+    CPU menyediakan kemampuan pemrosesan untuk menjalankan perangkat
+    lunak node, memvalidasi transaksi, mengeksekusi smart contract,
+    dan menangani pekerjaan sistem.
+  </p>
+  <p>Aspek kapasitas CPU yang perlu diperhatikan:</p>
+  <ul>
+    <li>Jumlah core dan thread.</li>
+    <li>Kecepatan pemrosesan per core.</li>
+    <li>Kemampuan menjalankan proses paralel.</li>
+    <li>Beban kerja saat sinkronisasi dan operasi normal.</li>
+    <li>Ruang kapasitas untuk lonjakan aktivitas.</li>
+  </ul>
+  <p>
+    Kebutuhan CPU dipengaruhi implementasi protokol. Beberapa proses
+    lebih bergantung pada performa single-core, sedangkan proses lain
+    dapat memanfaatkan banyak core.
+  </p>
+
+  <h2>4. Kapasitas RAM</h2>
+  <p>
+    RAM menyediakan ruang kerja sementara bagi node, database,
+    cache, dan proses aplikasi.
+  </p>
+  <ul>
+    <li>Total memori fisik yang tersedia.</li>
+    <li>Memori yang dibutuhkan proses node.</li>
+    <li>Kebutuhan cache dan database.</li>
+    <li>Memori untuk layanan pendukung.</li>
+    <li>Cadangan untuk lonjakan penggunaan.</li>
+  </ul>
+  <p>
+    Kapasitas RAM perlu direncanakan agar proses node tidak terus-menerus
+    bergantung pada swap yang dapat menurunkan performa.
+  </p>
+
+  <h2>5. Kapasitas Storage</h2>
+  <p>
+    Storage menyediakan ruang untuk database blockchain, state,
+    riwayat transaksi, indeks, dan file pendukung.
+  </p>
+  <p>Hal yang perlu diperhitungkan:</p>
+  <ul>
+    <li>Ukuran data blockchain saat ini.</li>
+    <li>Perkiraan pertumbuhan data.</li>
+    <li>Jenis node dan kebijakan pruning.</li>
+    <li>Ruang untuk indeks dan database tambahan.</li>
+    <li>Kapasitas backup dan snapshot.</li>
+    <li>Ruang kosong untuk pemeliharaan sistem.</li>
+  </ul>
+  <p>
+    Archive node biasanya membutuhkan ruang lebih besar karena
+    mempertahankan lebih banyak data historis dibanding node
+    yang menerapkan pruning.
+  </p>
+
+  <h2>6. Kapasitas Bandwidth</h2>
+  <p>
+    Bandwidth menentukan kemampuan koneksi untuk mengirim dan menerima
+    data dalam periode tertentu. Node menggunakannya untuk sinkronisasi,
+    komunikasi peer, dan pertukaran transaksi serta blok.
+  </p>
+  <ul>
+    <li>Kapasitas download.</li>
+    <li>Kapasitas upload.</li>
+    <li>Volume trafik harian atau bulanan.</li>
+    <li>Jumlah koneksi peer.</li>
+    <li>Stabilitas koneksi dan latency.</li>
+    <li>Batas transfer data dari penyedia layanan.</li>
+  </ul>
+  <p>
+    Kapasitas bandwidth harus mempertimbangkan kebutuhan sinkronisasi
+    dan aktivitas normal, bukan hanya kecepatan koneksi maksimum.
+  </p>
+
+  <h2>7. Kapasitas Berdasarkan Jenis Node</h2>
+  <div class="content-box">
+    <h3>Full Node</h3>
+    <p>
+      Memerlukan kapasitas untuk memverifikasi data dan menjalankan
+      aturan protokol sesuai desain jaringan.
+    </p>
+    <h3>Archive Node</h3>
+    <p>
+      Memerlukan kapasitas penyimpanan yang lebih besar untuk
+      mempertahankan data historis secara lengkap sesuai implementasi.
+    </p>
+    <h3>Validator Node</h3>
+    <p>
+      Memerlukan kapasitas komputasi dan jaringan yang memadai
+      untuk berpartisipasi dalam proses konsensus.
+    </p>
+    <h3>RPC Node</h3>
+    <p>
+      Kapasitasnya dipengaruhi jumlah permintaan aplikasi,
+      kompleksitas query, dan kebutuhan ketersediaan layanan.
+    </p>
+    <h3>Light Node</h3>
+    <p>
+      Umumnya memiliki kebutuhan sumber daya lebih rendah karena
+      tidak menyimpan dan memproses seluruh data seperti full node.
+    </p>
+  </div>
+
+  <h2>8. Faktor yang Memengaruhi Kebutuhan Kapasitas</h2>
+  <ul>
+    <li>Jumlah dan kompleksitas transaksi.</li>
+    <li>Ukuran state blockchain.</li>
+    <li>Pertumbuhan riwayat data.</li>
+    <li>Jumlah peer yang dilayani.</li>
+    <li>Frekuensi sinkronisasi.</li>
+    <li>Jumlah permintaan RPC.</li>
+    <li>Perubahan protokol dan konfigurasi node.</li>
+    <li>Target ketersediaan dan performa layanan.</li>
+  </ul>
+
+  <h2>9. Cara Menghitung Kebutuhan Kapasitas</h2>
+  <p>
+    Perencanaan kapasitas dapat dimulai dengan mengukur penggunaan
+    saat ini, memperkirakan pertumbuhan, dan menyediakan ruang cadangan.
+  </p>
+  <div class="content-box">
+    <p><span class="highlight">Kapasitas yang direncanakan</span></p>
+    <p>= kebutuhan berdasarkan beban kerja</p>
+    <p>+ kapasitas cadangan</p>
+  </div>
+  <p>
+    Sebagai contoh ilustratif, jika kebutuhan penyimpanan diperkirakan
+    800 GB dan operator menyediakan cadangan 25%, maka perencanaan
+    kapasitasnya menjadi:
+  </p>
+  <div class="content-box">
+    <p>800 GB + (25% × 800 GB)</p>
+    <p><strong>Hasil: 1.000 GB atau sekitar 1 TB.</strong></p>
+  </div>
+  <p>
+    Angka cadangan tersebut hanya contoh perhitungan. Besarnya ruang
+    cadangan harus disesuaikan dengan pertumbuhan data, kebutuhan
+    operasional, dan kebijakan pengelolaan node.
+  </p>
+
+  <h2>10. Capacity Planning untuk Pertumbuhan Jaringan</h2>
+  <p>
+    Capacity planning merupakan proses memperkirakan kebutuhan
+    infrastruktur pada masa mendatang.
+  </p>
+  <ol>
+    <li>Ukur kapasitas dan penggunaan saat ini.</li>
+    <li>Identifikasi tren pertumbuhan transaksi dan data.</li>
+    <li>Perkirakan kebutuhan CPU, RAM, storage, dan bandwidth.</li>
+    <li>Tentukan kapasitas cadangan.</li>
+    <li>Bandingkan kebutuhan dengan kemampuan infrastruktur.</li>
+    <li>Evaluasi pilihan peningkatan kapasitas.</li>
+    <li>Tinjau ulang perencanaan secara berkala.</li>
+  </ol>
+
+  <h2>11. Vertical Scaling dan Horizontal Scaling</h2>
+  <div class="content-box">
+    <h3>Vertical Scaling</h3>
+    <p>
+      Meningkatkan kapasitas satu server, misalnya menambah RAM,
+      menggunakan CPU lebih kuat, atau memperbesar storage.
+    </p>
+    <h3>Horizontal Scaling</h3>
+    <p>
+      Menambah jumlah server atau node untuk membagi beban kerja
+      pada komponen yang memang mendukung distribusi tersebut.
+    </p>
+  </div>
+  <p>
+    Tidak semua komponen blockchain dapat ditingkatkan dengan cara
+    yang sama. Penambahan server RPC, misalnya, berbeda dengan
+    meningkatkan kapasitas validator atau node konsensus.
+  </p>
+
+  <h2>12. Monitoring Kapasitas Infrastruktur</h2>
+  <p>
+    Monitoring membantu operator mengetahui apakah kapasitas yang
+    tersedia masih mencukupi.
+  </p>
+  <ul>
+    <li>CPU utilization dan beban pemrosesan.</li>
+    <li>RAM usage dan penggunaan swap.</li>
+    <li>Disk usage dan pertumbuhan database.</li>
+    <li>Bandwidth masuk dan keluar.</li>
+    <li>Latency serta packet loss.</li>
+    <li>Tren penggunaan dari waktu ke waktu.</li>
+  </ul>
+  <p>
+    Tools seperti Prometheus, Grafana, Node Exporter, dan utilitas
+    sistem operasi dapat membantu mengumpulkan serta menampilkan
+    metrik tersebut.
+  </p>
+
+  <h2>13. Tantangan dalam Perencanaan Kapasitas</h2>
+  <ul>
+    <li>Pertumbuhan aktivitas jaringan sulit diprediksi secara tepat.</li>
+    <li>Persyaratan perangkat lunak dapat berubah.</li>
+    <li>Data historis belum tentu menggambarkan beban masa depan.</li>
+    <li>Biaya peningkatan kapasitas dapat bertambah.</li>
+    <li>Kapasitas berlebihan dapat menyebabkan pemborosan.</li>
+    <li>Kapasitas terlalu rendah dapat mengganggu operasional.</li>
+  </ul>
+
+  <h2>14. Praktik Terbaik Capacity Requirements</h2>
+  <ul>
+    <li>Gunakan dokumentasi resmi sebagai acuan awal.</li>
+    <li>Ukur kebutuhan berdasarkan jenis node.</li>
+    <li>Gunakan data monitoring untuk membuat proyeksi.</li>
+    <li>Perhitungkan pertumbuhan data dan trafik.</li>
+    <li>Siapkan cadangan kapasitas yang wajar.</li>
+    <li>Lakukan pengujian sebelum peningkatan skala.</li>
+    <li>Evaluasi biaya dan kebutuhan secara berkala.</li>
+  </ul>
+
+  <h2>15. Kesimpulan</h2>
+  <p>
+    Blockchain Network Scalability Infrastructure Capacity Requirements
+    membantu operator memahami kapasitas CPU, RAM, storage, dan bandwidth
+    yang diperlukan untuk menjalankan infrastruktur blockchain.
+  </p>
+  <p>
+    Dengan perencanaan berdasarkan jenis node, pengukuran beban kerja,
+    dan proyeksi pertumbuhan, infrastruktur dapat dipersiapkan secara
+    lebih terarah untuk mendukung skalabilitas jaringan.
+  </p>
+
+  <div class="content-box">
+    <h3>Pelajari Web3 Lebih Dalam</h3>
+    <p>
+      WEB3 VISION menyediakan materi edukasi blockchain, Web3,
+      infrastruktur jaringan, keamanan, dan teknologi terdesentralisasi
+      untuk membantu pemula memahami ekosistem digital.
+    </p>
+    <a href="index.html">Jelajahi Artikel Web3 Lainnya →</a>
+  </div>
+
+  <footer>
+    <p>WEB3 VISION — Explore Web3. Connect the Future. Build Opportunities.</p>
+    <p>
+      <a href="about.html">About</a> |
+      <a href="privacy-policy.html">Privacy Policy</a> |
+      <a href="disclaimer.html">Disclaimer</a> |
+      <a href="contact.html">Contact</a> |
+      <a href="editorial-policy.html">Editorial Policy</a>
+    </p>
+    <p>© 2026 WEB3 VISION. All rights reserved.</p>
+  </footer>
+
+</div>
+</body>
+</html>
