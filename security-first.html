@@ -5,49 +5,194 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Security First: Panduan Keamanan Web3 untuk Pemula</title>
-  <meta name="description" content="Pelajari cara melindungi wallet, aset digital, akun, dan aktivitas Web3 dari berbagai ancaman keamanan.">
+  <meta name="description" content="Pelajari cara menjaga keamanan wallet, seed phrase, private key, dan aset digital di ekosistem Web3.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 20px;
+      background: #071426;
+      color: #e5edf7;
+      font-family: Arial, sans-serif;
+      line-height: 1.8;
+    }
+
+    header {
+      max-width: 850px;
+      margin: 20px auto 30px;
+      text-align: center;
+    }
+
+    header h2 {
+      color: #38bdf8;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      color: #94a3b8;
+      margin-top: 0;
+    }
+
+    .article {
+      max-width: 850px;
+      margin: auto;
+      padding: 28px;
+      background: #10243d;
+      border: 1px solid #1e3a5f;
+      border-radius: 16px;
+    }
+
+    h1, h2 {
+      color: #38bdf8;
+      line-height: 1.4;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 21px;
+    }
+
+    p, li {
+      color: #d3deeb;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 18px;
+      background: #0284c7;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .back:hover {
+      background: #0369a1;
+    }
+
+    footer {
+      margin: 30px auto 10px;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 14px;
+      }
+
+      .article {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 25px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-  <h1>Security First: Panduan Keamanan Web3 untuk Pemula</h1>
+  <header>
+    <h2>🌐 Tulis Visi Web3</h2>
+    <p>Learn • Explore • Build the Future</p>
+  </header>
 
-  <p>Keamanan merupakan hal penting dalam dunia Web3. Pengguna perlu memahami cara melindungi dompet digital, akun, dan aset agar terhindar dari berbagai ancaman.</p>
+  <main class="article">
+    <h1>Security First: Panduan Keamanan Web3 untuk Pemula</h1>
 
-  <h2>Apa Itu Keamanan Web3?</h2>
-  <p>Keamanan Web3 mencakup langkah-langkah untuk melindungi dompet digital, identitas, transaksi, dan data ketika menggunakan aplikasi berbasis blockchain.</p>
+    <p>
+      Keamanan merupakan salah satu hal terpenting dalam dunia Web3.
+      Pengguna blockchain memiliki kendali atas aset digital mereka sendiri.
+      Karena itu, memahami cara melindungi wallet dan informasi pribadi
+      menjadi langkah awal yang sangat penting.
+    </p>
 
-  <h2>Jaga Seed Phrase dan Private Key</h2>
-  <ul>
-    <li>Jangan pernah membagikan seed phrase kepada siapa pun.</li>
-    <li>Simpan seed phrase secara offline di tempat aman.</li>
-    <li>Jangan menyimpan private key di situs atau aplikasi tidak tepercaya.</li>
-    <li>Waspadai orang yang mengaku sebagai admin dan meminta akses dompet.</li>
-  </ul>
+    <h2>1. Mengapa Keamanan Web3 Penting?</h2>
+    <p>
+      Transaksi blockchain umumnya tidak dapat dibatalkan setelah dikonfirmasi.
+      Jika aset dikirim ke alamat yang salah atau akses wallet dicuri,
+      pemulihannya bisa sangat sulit. Kesadaran keamanan membantu mengurangi
+      risiko kehilangan aset digital.
+    </p>
 
-  <h2>Waspadai Phishing</h2>
-  <p>Phishing adalah upaya penipuan untuk mencuri informasi atau akses akun melalui situs, pesan, dan tautan palsu.</p>
-  <ul>
-    <li>Periksa alamat situs sebelum menghubungkan wallet.</li>
-    <li>Gunakan tautan dari sumber resmi.</li>
-    <li>Jangan membuka lampiran mencurigakan.</li>
-    <li>Hindari menandatangani transaksi yang tidak dipahami.</li>
-  </ul>
+    <h2>2. Lindungi Seed Phrase dan Private Key</h2>
+    <p>
+      Seed phrase dan private key merupakan informasi rahasia yang dapat
+      memberikan akses ke wallet. Siapa pun yang memilikinya berpotensi
+      mengendalikan aset di dalam wallet tersebut.
+    </p>
+    <ul>
+      <li>Jangan pernah membagikan seed phrase atau private key.</li>
+      <li>Jangan menyimpannya di chat atau unggahan media sosial.</li>
+      <li>Simpan cadangan secara offline di tempat yang aman.</li>
+      <li>Jangan memasukkannya ke situs yang tidak terpercaya.</li>
+    </ul>
 
-  <h2>Gunakan Wallet dengan Bijak</h2>
-  <p>Pisahkan dompet untuk menyimpan aset utama dan aktivitas eksperimen. Periksa jaringan, alamat tujuan, biaya transaksi, serta izin kontrak sebelum menyetujui transaksi.</p>
+    <h2>3. Waspadai Phishing dan Penipuan</h2>
+    <p>
+      Phishing adalah upaya menipu pengguna agar memberikan informasi rahasia
+      atau menghubungkan wallet ke situs berbahaya.
+    </p>
+    <ul>
+      <li>Periksa alamat situs sebelum menghubungkan wallet.</li>
+      <li>Hindari tautan mencurigakan dari pesan pribadi.</li>
+      <li>Jangan percaya janji hadiah atau keuntungan yang tidak masuk akal.</li>
+      <li>Periksa informasi melalui kanal resmi proyek.</li>
+    </ul>
 
-  <h2>Aktifkan Perlindungan Akun</h2>
-  <ul>
-    <li>Gunakan kata sandi yang kuat dan unik.</li>
-    <li>Aktifkan autentikasi dua faktor jika tersedia.</li>
-    <li>Perbarui aplikasi dan perangkat secara berkala.</li>
-    <li>Jangan menggunakan Wi-Fi publik untuk aktivitas sensitif tanpa perlindungan yang memadai.</li>
-  </ul>
+    <h2>4. Gunakan Wallet dengan Bijak</h2>
+    <p>
+      Gunakan wallet terpisah untuk aktivitas sehari-hari dan penyimpanan
+      aset jangka panjang. Periksa jaringan, alamat penerima, serta detail
+      transaksi sebelum memberikan persetujuan.
+    </p>
 
-  <h2>Kesimpulan</h2>
-  <p>Keamanan Web3 dimulai dari kebiasaan pengguna. Selalu periksa sumber informasi, pahami transaksi, dan jangan pernah membagikan informasi rahasia wallet.</p>
+    <h2>5. Lindungi Perangkat dan Akun</h2>
+    <ul>
+      <li>Gunakan kata sandi yang kuat dan unik.</li>
+      <li>Aktifkan autentikasi dua faktor jika tersedia.</li>
+      <li>Perbarui sistem operasi dan aplikasi secara berkala.</li>
+      <li>Hindari memasang aplikasi dari sumber tidak resmi.</li>
+      <li>Jangan menggunakan jaringan publik yang tidak aman untuk aktivitas sensitif.</li>
+    </ul>
 
-  <p><a href="index.html">← Kembali ke Beranda</a></p>
+    <h2>6. Periksa Izin dan Transaksi Wallet</h2>
+    <p>
+      Sebelum menyetujui transaksi atau memberikan izin kepada aplikasi
+      terdesentralisasi, pahami tindakan yang diminta. Periksa dan cabut
+      izin token yang sudah tidak diperlukan melalui alat resmi jaringan
+      atau wallet yang digunakan.
+    </p>
+
+    <h2>Kesimpulan</h2>
+    <p>
+      Keamanan Web3 dimulai dari kebiasaan pengguna. Melindungi informasi
+      rahasia, memeriksa tautan, memahami transaksi, dan menjaga perangkat
+      dapat membantu mengurangi risiko. Selalu utamakan keamanan sebelum
+      berinteraksi dengan aset digital.
+    </p>
+
+    <a href="index.html" class="back">← Kembali ke Beranda</a>
+  </main>
+
+  <footer>
+    © 2026 Tulis Visi Web3. Semua hak dilindungi.
+  </footer>
 
 </body>
 </html>
