@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -115,13 +114,23 @@ footer{text-align:center;padding:30px 0;border-top:1px solid #233651;margin-top:
 <label>Nama Brand atau Proyek</label>
 <input type="text" name="Brand atau Proyek" required placeholder="Nama brand/proyek">
 
+
 <label>Jenis Promosi</label>
 <select name="Jenis Promosi" required>
-<option value="">Pilih jenis promosi</option>
-<option>Banner Advertising</option>
-<option>Sponsored Article</option>
-<option>Project Promotion</option>
+  <option value="">Pilih jenis promosi</option>
+  <option>Banner Advertising</option>
+  <option>Sponsored Article</option>
+  <option>Project Promotion</option>
 </select>
+
+<label>Pilih Paket Advertising</label>
+<select name="Paket" required>
+  <option value="">Pilih paket promosi</option>
+  <option value="Starter">Starter - Rp50.000 / 7 Hari</option>
+  <option value="Growth">Growth - Rp100.000 / 14 Hari</option>
+  <option value="Premium">Premium - Rp200.000 / 30 Hari</option>
+</select>
+
 
 <label>Link Website atau Media Sosial</label>
 <input type="url" name="Link" placeholder="https://">
@@ -175,15 +184,17 @@ form.addEventListener("submit", async function(event) {
 
   const data = new FormData(form);
 
-  const campaign = {
-    advertiser_name: data.get("Nama Pengiklan"),
-    brand_name: data.get("Brand atau Proyek"),
-    promotion_type: data.get("Jenis Promosi"),
-    website_url: data.get("Link") || null,
-    budget: data.get("Anggaran"),
-    message: data.get("Pesan") || null,
-    status: "pending"
-  };
+  
+ const campaign = {
+  advertiser_name: data.get("Nama Pengiklan"),
+  brand_name: data.get("Brand atau Proyek"),
+  promotion_type: data.get("Jenis Promosi"),
+  package_name: data.get("Paket"),
+  website_url: data.get("Link") || null,
+  budget: data.get("Anggaran"),
+  message: data.get("Pesan") || null,
+  status: "pending"
+}; 
 
   const { error } = await supabaseClient
     .from("ad_campaigns")
