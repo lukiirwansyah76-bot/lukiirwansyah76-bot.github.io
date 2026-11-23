@@ -1159,14 +1159,87 @@ Advertise With Us
   </a>
 </p>
   </footer>
-<section id="web3-vision-ads" style="max-width:1100px;margin:30px auto;padding:20px;background:#101b2d;border-radius:14px;color:white;">
-  <h2 style="color:#55d6ff;">Sponsored Web3 Projects</h2>
-  <div id="web3-ads-list">Memuat iklan...</div>
+
+<section id="web3-vision-ads">
+  <div class="ads-heading">
+    <span>WEB3 VISION AD NETWORK</span>
+    <h2>Sponsored Web3 Projects</h2>
+    <p>Discover projects building the decentralized future.</p>
+  </div>
+
+  <div id="web3-ads-list" class="ads-grid">
+    <p class="ad-empty">Loading sponsored projects...</p>
+  </div>
 </section>
+
+<style>
+#web3-vision-ads {
+  max-width:1100px;
+  margin:45px auto;
+  padding:25px 18px;
+  color:#fff;
+  font-family:Arial,sans-serif;
+}
+.ads-heading {
+  text-align:center;
+  margin-bottom:25px;
+}
+.ads-heading span {
+  color:#45d5ff;
+  font-size:12px;
+  letter-spacing:2px;
+}
+.ads-heading h2 {
+  font-size:27px;
+  margin:12px 0;
+}
+.ads-heading p {
+  color:#aab8cc;
+}
+.ads-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.ad-card {
+  background:#101b2d;
+  border:1px solid #263b56;
+  border-radius:14px;
+  padding:16px;
+  transition:transform .2s;
+}
+.ad-card:hover {
+  transform:translateY(-4px);
+}
+.ad-card img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:9px;
+}
+.ad-card h3 {
+  margin:14px 0;
+  font-size:18px;
+}
+.ad-card a {
+  display:inline-block;
+  padding:11px 17px;
+  border-radius:7px;
+  background:#16b8e8;
+  color:#06111b;
+  text-decoration:none;
+  font-weight:bold;
+}
+.ad-empty {
+  color:#aab8cc;
+  text-align:center;
+  grid-column:1/-1;
+}
+</style>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-(async function () {
+(async function() {
   const client = window.supabase.createClient(
     "https://gtedobyfhytzjmsqmnpi.supabase.co",
     "sb_publishable_6YRDYNz-_jgPrltSAJxBXQ_ue0VDoJi"
@@ -1174,56 +1247,58 @@ Advertise With Us
 
   const container = document.getElementById("web3-ads-list");
 
-  const { data, error } = await client
+  const {data, error} = await client
     .from("ad_campaigns")
     .select("id,brand_name,banner_url,target_url")
-    .eq("status", "approved")
-    .order("created_at", { ascending: false });
+    .eq("status","approved")
+    .order("created_at",{ascending:false});
 
-  if (error) {
-    container.textContent = "Iklan belum dapat dimuat.";
+  if(error) {
+    container.innerHTML =
+      '<p class="ad-empty">Unable to load sponsored projects.</p>';
     console.error(error);
     return;
   }
 
-  if (!data || data.length === 0) {
-    container.textContent = "Belum ada iklan aktif.";
+  const validAds = (data || []).filter(ad =>
+    ad.target_url && /^https:\/\//i.test(ad.target_url)
+  );
+
+  if(!validAds.length) {
+    container.innerHTML =
+      '<p class="ad-empty">No sponsored projects available yet.</p>';
     return;
   }
 
-  container.innerHTML = data.map(ad => {
-    const brand = String(ad.brand_name || "Web3 Project")
-      .replace(/[&<>"']/g, c => ({
-        "&":"&amp;","<":"&lt;",">":"&gt;",
-        '"':"&quot;","'":"&#39;"
-      })[c]);
+  container.innerHTML = "";
 
-    const banner = String(ad.banner_url || "").trim();
-    const target = String(ad.target_url || "").trim();
+  validAds.forEach(ad => {
+    const card = document.createElement("article");
+    card.className = "ad-card";
 
-    if (!/^https:\/\//i.test(target)) {
-      return "";
+    const title = document.createElement("h3");
+    title.textContent = ad.brand_name || "Web3 Project";
+    card.appendChild(title);
+
+    if(ad.banner_url && /^https:\/\//i.test(ad.banner_url)) {
+      const img = document.createElement("img");
+      img.src = ad.banner_url;
+      img.alt = title.textContent;
+      img.loading = "lazy";
+      card.insertBefore(img,title);
     }
 
-    const image = /^https:\/\//i.test(banner)
-      ? `<img src="${banner.replace(/"/g, "%22")}" alt="${brand}" style="width:100%;max-height:220px;object-fit:contain;border-radius:10px;">`
-      : `<div style="padding:25px;background:#172a43;border-radius:10px;">${brand}</div>`;
+    const link = document.createElement("a");
+    link.href = ad.target_url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "Visit Project";
 
-    return `
-      <a href="${target.replace(/"/g, "%22")}" target="_blank" rel="noopener noreferrer"
-         style="display:block;margin:15px 0;padding:12px;background:#172a43;border-radius:12px;color:white;text-decoration:none;">
-        ${image}
-        <p style="font-weight:bold;margin:10px 0 0;">${brand}</p>
-      </a>
-    `;
-  }).join("");
-
-  if (!container.innerHTML.trim()) {
-    container.textContent = "Belum ada iklan dengan tautan tujuan yang valid.";
-  }
+    card.appendChild(link);
+    container.appendChild(card);
+  });
 })();
 </script>
-
 
 /body>
 </html>
