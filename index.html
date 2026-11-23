@@ -1251,7 +1251,8 @@ Advertise With Us
     .from("ad_campaigns")
     .select("id,brand_name,banner_url,target_url")
     .eq("status","approved")
-    .order("created_at",{ascending:false});
+.gte("expires_at", new Date().toISOString())
+.order("created_at",{ascending:false});
 
   if(error) {
     container.innerHTML =
