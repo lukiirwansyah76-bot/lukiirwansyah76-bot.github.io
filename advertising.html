@@ -110,7 +110,8 @@ footer{text-align:center;padding:30px 0;border-top:1px solid #233651;margin-top:
   
 <label>Nama Pengiklan</label>
 <input type="text" name="Nama Pengiklan" required placeholder="Nama Anda">
-
+<label>Email Pengiklan</label>
+<input type="email" name="Email Pengiklan" required placeholder="nama@email.com">
 <label>Nama Brand atau Proyek</label>
 <input type="text" name="Brand atau Proyek" required placeholder="Nama brand/proyek">
 
@@ -187,6 +188,7 @@ form.addEventListener("submit", async function(event) {
   
  const campaign = {
   advertiser_name: data.get("Nama Pengiklan"),
+  advertiser_email: data.get("Email Pengiklan"),
   brand_name: data.get("Brand atau Proyek"),
   promotion_type: data.get("Jenis Promosi"),
   package_name: data.get("Paket"),
