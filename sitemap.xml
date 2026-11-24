@@ -1,56 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/about.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/about-us.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/privacy.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/contact.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/editorial-policy.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/academy.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/advertising.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/airdrop.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/berita.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/blockchain.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/apa-itu-web3.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/web3-pemula.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/blockchain-pemula.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/wallet-aman.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/defi-pemula.html</loc>
-  </url>
-  <url>
-    <loc>https://lukiirwansyah76-bot.github.io/smart-contract.html</loc>
-  </url>
-
+<url><loc>https://lukiirwansyah76-bot.github.io/</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/7-risiko-crypto.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/about-us.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/academy.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/account-abstraction-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/advertising.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/airdrop-radar.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/airdrop.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/apa-itu-web3.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/berita.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-archive-node-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-bootnode-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-consensus-layer-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-consensus-mechanism-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-data-availability-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-execution-layer-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-full-node-vs-light-node-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-interoperability-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-layer-1-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-layer-2-vs-layer-1-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-modular-vs-monolithic-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-architecture-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-bandwidth-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-congestion-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-decentralization-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-diagnostics-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-governance-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-infrastructure-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-latency-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-monitoring-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-optimization-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-performance-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-protocol-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-reliability-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-architecture-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-capacity-optimization-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-capacity-planning-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-challenges-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-decentralization-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-decentralized-infrastructure-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-governance-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-infrastructure-capacity-requirements-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-infrastructure-cost-analysis-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-infrastructure-operations-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-infrastructure-performance-optimization-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-infrastructure-reliability-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-infrastructure-resource-requirements-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-infrastructure-security-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-interoperability-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-load-balancing-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-metrics-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-performance-benchmarking-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-resource-allocation-strategies-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-resource-allocation-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-resource-consumption-analysis-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-resource-efficiency-analysis-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-resource-efficiency-monitoring-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-resource-efficiency-optimization-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-resource-efficiency-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-resource-monitoring-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-resource-optimization-metrics-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-resource-prioritization-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-resource-scheduling-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-resource-utilization-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-security-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-solutions-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-trade-offs-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-traffic-management-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-trilemma-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-security-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-throughput-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-topology-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-network-troubleshooting-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-node-vs-validator-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-nodes-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-peer-to-peer-network-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-rollups-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-rpc-node-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-scalability-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-sharding-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain-validator-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/blockchain.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/cara-kerja-blockchain.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/contact.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/cross-chain-bridge-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/crypto-blockchain.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/crypto-wallet-security.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/cryptocurrency-vs-blockchain.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/dao-governance-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/dao-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/decentralized-storage-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/defi-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/defi-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/depin-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/digital-opportunities.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/disclaimer.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/editorial-policy.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/gas-fee-dalam-crypto.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/layer-2-blockchain.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/metaverse-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/mev-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/nft-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/oracle-blockchain-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/panduan-airdrop-crypto.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/privacy-policy.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/proof-of-work-vs-proof-of-stake.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/public-key-vs-private-key.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/rwa-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/security-first.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/smart-contract-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/smart-contract.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/terms.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/tokenomics-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/wallet-aman.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/wallet-crypto-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/web3-community.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/web3-gaming-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/web3-identity-untuk-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/web3-pemula.html</loc></url>
+<url><loc>https://lukiirwansyah76-bot.github.io/zero-knowledge-proof-untuk-pemula.html</loc></url>
 </urlset>
