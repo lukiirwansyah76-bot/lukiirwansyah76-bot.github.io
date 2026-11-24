@@ -147,28 +147,51 @@ footer{
   color:#9aacc0
 }
 footer strong{color:#39dcff}
+.menu-toggle{
+  display:none;
+  border:1px solid #236083;
+  background:#102b46;
+  color:#39dcff;
+  border-radius:8px;
+  padding:8px 12px;
+  font-size:22px;
+  cursor:pointer
+}
+
 @media(max-width:650px){
   .navbar{
-    align-items:flex-start;
-    flex-direction:column
+    position:relative;
+    align-items:center;
+    flex-direction:row;
+    padding:13px 0
   }
-  nav{gap:12px}
+  .menu-toggle{display:block}
+  nav{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    flex-direction:column;
+    gap:0;
+    padding:8px 14px;
+    background:#091a30;
+    border:1px solid #17466a;
+    border-radius:0 0 12px 12px
+  }
+  nav.open{display:flex}
+  nav a{padding:10px 4px;font-size:15px}
   .hero{padding:65px 10px}
+     }
 }
 </style>
 </head>
 <body>
 <header>
   <div class="wrap navbar">
-    <div class="logo">◈ WEB3 <span>VISION</span></div>
-<nav>
-  <a href="#home">Home</a>
-  <a href="#explore">Explore</a>
-  <a href="#academy">Academy</a>
-  <a href="#airdrop">Airdrop</a>
-  <a href="#contact">Contact</a>
-  <a href="advertising.html">Advertising</a>
-</nav>
+    <div class="logo">◈ WEB3 <span>VISION</span>
+    </div>
+   
   </div>
 </header>
 <main>
@@ -1320,5 +1343,27 @@ Advertise With Us
   </div>
 </footer>
 
+<script>
+(function(){
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('main-nav');
+
+  if (!toggle || !menu) return;
+
+  toggle.addEventListener('click', function(){
+    const isOpen = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.textContent = isOpen ? '×' : '☰';
+  });
+
+  menu.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.textContent = '☰';
+    });
+  });
+})();
+</script>
 </body>
 </html>
