@@ -1,275 +1,409 @@
 
-ensi, dan stabilitas operasional.
-  </p>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analisis Efisiensi Sumber Daya Blockchain untuk Pemula | WEB3 VISION</title>
+<meta name="description" content="Panduan pemula memahami analisis efisiensi sumber daya blockchain, mulai dari CPU, RAM, penyimpanan, bandwidth, latency hingga throughput.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://lukiirwansyah76-bot.github.io/blockchain-network-scalability-resource-efficiency-analysis-untuk-pemula.html">
 
-  <h2>2. Komponen Sumber Daya yang Perlu Dianalisis</h2>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#f2f5fa;
+color:#263348;
+line-height:1.8;
+}
+header{
+background:linear-gradient(135deg,#101d35,#075b83);
+color:white;
+padding:45px 20px;
+text-align:center;
+}
+header h1{
+max-width:850px;
+margin:auto;
+font-size:32px;
+line-height:1.3;
+}
+header p{color:#d9edff}
+nav{
+background:#10233e;
+padding:13px;
+text-align:center;
+}
+nav a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+font-size:14px;
+}
+main{
+max-width:900px;
+margin:30px auto;
+background:white;
+padding:35px;
+border-radius:12px;
+box-shadow:0 4px 18px rgba(0,0,0,.06);
+}
+h2{
+color:#124b78;
+margin-top:35px;
+border-bottom:2px solid #e5edf5;
+padding-bottom:8px;
+}
+h3{color:#087b9d;margin-top:25px}
+p{margin:15px 0}
+li{margin:8px 0}
+a{color:#0879b9}
+.note{
+background:#edf7ff;
+border-left:4px solid #0788bd;
+padding:15px;
+margin:22px 0;
+border-radius:5px;
+}
+.table-wrap{overflow-x:auto}
+table{
+width:100%;
+border-collapse:collapse;
+margin:20px 0;
+min-width:450px;
+}
+th,td{
+border:1px solid #dce4ed;
+padding:12px;
+text-align:left;
+}
+th{background:#eaf2fa;color:#163b5e}
+tr:nth-child(even){background:#f8fafc}
+footer{
+background:#101d35;
+color:white;
+text-align:center;
+padding:28px 15px;
+}
+footer a{
+color:#b8e8ff;
+text-decoration:none;
+margin:0 8px;
+}
+@media(max-width:600px){
+header{padding:30px 17px}
+header h1{font-size:25px}
+main{margin:12px;padding:20px}
+nav a{display:inline-block;margin:5px}
+}
+</style>
+</head>
 
-  <h3>CPU (Central Processing Unit)</h3>
-  <p>
-    CPU digunakan untuk menjalankan proses komputasi, validasi transaksi,
-    eksekusi smart contract, dan aktivitas node. Penggunaan CPU yang terus
-    tinggi dapat menjadi tanda bahwa beban kerja jaringan meningkat.
-  </p>
+<body>
 
-  <h3>RAM (Random Access Memory)</h3>
-  <p>
-    RAM menyimpan data sementara yang diperlukan aplikasi node saat bekerja.
-    Kapasitas RAM yang tidak mencukupi dapat menyebabkan proses melambat,
-    penggunaan swap meningkat, atau aplikasi mengalami gangguan.
-  </p>
+<header>
+<h1>Analisis Efisiensi Sumber Daya Jaringan Blockchain</h1>
+<p>Panduan memahami penggunaan sumber daya dan kinerja jaringan blockchain untuk pemula.</p>
+</header>
 
-  <h3>Penyimpanan dan Disk I/O</h3>
-  <p>
-    Node blockchain membutuhkan ruang penyimpanan untuk blockchain data,
-    database, indeks, dan catatan operasional. Disk I/O menunjukkan aktivitas
-    membaca dan menulis data pada media penyimpanan.
-  </p>
+<nav>
+<a href="/">Beranda</a>
+<a href="/web3-pemula.html">Belajar Web3</a>
+<a href="#analisis">Analisis</a>
+<a href="#kesimpulan">Kesimpulan</a>
+</nav>
 
-  <h3>Bandwidth dan Koneksi Jaringan</h3>
-  <p>
-    Bandwidth berkaitan dengan kapasitas pengiriman data. Koneksi yang
-    tidak stabil dapat mengganggu komunikasi antarnode, sinkronisasi,
-    serta penyebaran informasi transaksi dan blok.
-  </p>
+<main>
 
-  <h3>Latency dan Throughput</h3>
-  <p>
-    Latency adalah waktu yang dibutuhkan untuk menyelesaikan atau
-    menyampaikan suatu proses. Throughput menggambarkan jumlah pekerjaan
-    atau transaksi yang dapat diproses dalam periode tertentu.
-  </p>
+<p>
+Blockchain merupakan teknologi jaringan terdistribusi yang membutuhkan
+sumber daya komputasi untuk memproses transaksi, memvalidasi blok,
+menyimpan data, dan menjaga komunikasi antarnode. Seiring meningkatnya
+aktivitas jaringan, kebutuhan terhadap sumber daya juga dapat berubah.
+</p>
 
-  <h2>3. Mengapa Analisis Efisiensi Diperlukan?</h2>
-  <p>
-    Analisis membantu pengelola node memahami hubungan antara beban kerja
-    dan penggunaan perangkat. Tanpa pengukuran, peningkatan penggunaan
-    sumber daya dapat sulit dibedakan antara kondisi normal dan masalah
-    infrastruktur.
-  </p>
-  <ul>
-    <li>Mengenali komponen yang menjadi hambatan kinerja.</li>
-    <li>Memahami perubahan kebutuhan infrastruktur.</li>
-    <li>Membandingkan penggunaan sumber daya antarperiode.</li>
-    <li>Mendukung perencanaan kapasitas node.</li>
-    <li>Membantu menjaga kestabilan operasional.</li>
-  </ul>
+<p>
+Karena itu, analisis efisiensi sumber daya menjadi bagian penting dalam
+memahami kemampuan sebuah jaringan blockchain. Analisis ini membantu
+menjelaskan bagaimana perangkat dan infrastruktur jaringan digunakan
+untuk menjalankan tugasnya.
+</p>
 
-  <h2>4. Contoh Data untuk Analisis</h2>
-  <p>
-    Tabel berikut merupakan contoh ilustratif untuk membantu pemula
-    memahami cara membaca data penggunaan sumber daya. Angka ini bukan
-    hasil pengukuran jaringan blockchain tertentu.
-  </p>
+<h2>1. Apa Itu Efisiensi Sumber Daya Blockchain?</h2>
 
-  <div class="table-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Indikator</th>
-          <th>Node A</th>
-          <th>Node B</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Penggunaan CPU</td>
-          <td>35%</td>
-          <td>75%</td>
-        </tr>
-        <tr>
-          <td>Penggunaan RAM</td>
-          <td>4 GB</td>
-          <td>7 GB</td>
-        </tr>
-        <tr>
-          <td>Penyimpanan terpakai</td>
-          <td>120 GB</td>
-          <td>180 GB</td>
-        </tr>
-        <tr>
-          <td>Bandwidth rata-rata</td>
-          <td>15 Mbps</td>
-          <td>30 Mbps</td>
-        </tr>
-        <tr>
-          <td>Throughput ilustratif</td>
-          <td>100 transaksi/detik</td>
-          <td>110 transaksi/detik</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<p>
+Efisiensi sumber daya blockchain adalah kemampuan jaringan dalam
+menggunakan kapasitas komputasi, memori, penyimpanan, dan komunikasi
+secara proporsional untuk menjalankan proses jaringan.
+</p>
 
-  <p>
-    Dari contoh tersebut, Node B menggunakan CPU lebih tinggi tetapi
-    peningkatan throughput relatif kecil. Hal ini dapat menjadi alasan
-    untuk melakukan pemeriksaan lebih lanjut. Namun, kesimpulan tidak
-    boleh dibuat hanya berdasarkan satu tabel.
-  </p>
+<p>
+Jaringan yang efisien bukan sekadar jaringan yang menggunakan sumber
+daya paling sedikit. Jaringan juga harus mampu mempertahankan keamanan,
+konsistensi data, desentralisasi, dan ketersediaan layanan.
+</p>
 
-  <h2>5. Cara Menghitung Efisiensi Secara Sederhana</h2>
-  <p>
-    Salah satu pendekatan awal adalah membandingkan jumlah pekerjaan
-    yang diselesaikan dengan sumber daya yang digunakan.
-  </p>
+<h2>2. Komponen Sumber Daya yang Perlu Dianalisis</h2>
 
-  <div class="note">
-    <strong>Contoh rumus sederhana:</strong><br>
-    Efisiensi relatif = jumlah transaksi yang diproses ÷ penggunaan CPU.
-  </div>
+<h3>CPU (Central Processing Unit)</h3>
+<p>
+CPU digunakan untuk menjalankan proses komputasi, validasi transaksi,
+eksekusi smart contract, dan aktivitas node. Penggunaan CPU yang terus
+tinggi dapat menjadi tanda bahwa beban kerja jaringan meningkat.
+</p>
 
-  <p>
-    Jika suatu node memproses 100 transaksi per detik dengan penggunaan
-    CPU 50%, hasil perbandingan sederhananya adalah 2 transaksi per detik
-    untuk setiap satu poin persentase penggunaan CPU.
-  </p>
-  <p>
-    Perhitungan tersebut hanya alat perbandingan sederhana. Untuk analisis
-    yang lebih akurat, gunakan periode pengamatan, jenis perangkat,
-    konfigurasi node, dan kondisi jaringan yang setara.
-  </p>
+<h3>RAM (Random Access Memory)</h3>
+<p>
+RAM menyimpan data sementara yang diperlukan aplikasi node saat bekerja.
+Kapasitas RAM yang tidak mencukupi dapat menyebabkan proses melambat,
+penggunaan swap meningkat, atau aplikasi mengalami gangguan.
+</p>
 
-  <h2>6. Metode Pengujian yang Lebih Adil</h2>
-  <ol>
-    <li>Tentukan tujuan pengukuran, misalnya membandingkan dua konfigurasi node.</li>
-    <li>Gunakan perangkat dan lingkungan pengujian yang terdokumentasi.</li>
-    <li>Catat penggunaan CPU, RAM, disk, dan bandwidth.</li>
-    <li>Ukur throughput dan latency dalam periode yang sama.</li>
-    <li>Ulangi pengujian untuk mengurangi pengaruh kondisi sesaat.</li>
-    <li>Dokumentasikan konfigurasi perangkat lunak dan jaringan.</li>
-  </ol>
+<h3>Penyimpanan dan Disk I/O</h3>
+<p>
+Node blockchain membutuhkan ruang penyimpanan untuk data blockchain,
+database, indeks, dan catatan operasional. Disk I/O menunjukkan aktivitas
+membaca dan menulis data pada media penyimpanan.
+</p>
 
-  <div class="note">
-    <strong>Catatan:</strong> Perbandingan harus mempertimbangkan jenis
-    blockchain, mekanisme konsensus, jumlah validator, beban transaksi,
-    dan konfigurasi perangkat. Hasil dari dua jaringan berbeda belum
-    tentu dapat dibandingkan secara langsung.
-  </div>
+<h3>Bandwidth dan Koneksi Jaringan</h3>
+<p>
+Bandwidth berkaitan dengan kapasitas pengiriman data. Koneksi yang
+tidak stabil dapat mengganggu komunikasi antarnode, sinkronisasi,
+serta penyebaran informasi transaksi dan blok.
+</p>
 
-  <h2>7. Mengenali Kemungkinan Hambatan</h2>
+<h3>Latency dan Throughput</h3>
+<p>
+Latency adalah waktu yang dibutuhkan untuk menyelesaikan atau
+menyampaikan suatu proses. Throughput menggambarkan jumlah pekerjaan
+atau transaksi yang dapat diproses dalam periode tertentu.
+</p>
 
-  <h3>CPU tinggi</h3>
-  <p>
-    Periksa proses yang menggunakan CPU, beban validasi, aktivitas smart
-    contract, dan proses latar belakang.
-  </p>
+<h2>3. Mengapa Analisis Efisiensi Diperlukan?</h2>
 
-  <h3>RAM terus meningkat</h3>
-  <p>
-    Periksa penggunaan memori aplikasi, cache, proses yang berjalan,
-    dan kemungkinan kebocoran memori.
-  </p>
+<p>
+Analisis membantu pengelola node memahami hubungan antara beban kerja
+dan penggunaan perangkat. Tanpa pengukuran, peningkatan penggunaan
+sumber daya dapat sulit dibedakan antara kondisi normal dan masalah
+infrastruktur.
+</p>
 
-  <h3>Disk I/O tinggi</h3>
-  <p>
-    Periksa aktivitas database, kecepatan media penyimpanan, ruang kosong,
-    serta proses sinkronisasi.
-  </p>
+<ul>
+<li>Mengenali komponen yang menjadi hambatan kinerja.</li>
+<li>Memahami perubahan kebutuhan infrastruktur.</li>
+<li>Membandingkan penggunaan sumber daya antarperiode.</li>
+<li>Mendukung perencanaan kapasitas node.</li>
+<li>Membantu menjaga kestabilan operasional.</li>
+</ul>
 
-  <h3>Latency meningkat</h3>
-  <p>
-    Periksa kualitas koneksi, jarak antarnode, kondisi jaringan,
-    antrean pemrosesan, dan beban sistem.
-  </p>
+<h2>4. Contoh Data untuk Analisis</h2>
 
-  <h2>8. Tools untuk Membantu Analisis</h2>
+<p>
+Tabel berikut merupakan contoh ilustratif untuk membantu pemula
+memahami cara membaca data penggunaan sumber daya. Angka ini bukan
+hasil pengukuran jaringan blockchain tertentu.
+</p>
 
-  <ul>
-    <li>
-      <strong>Prometheus:</strong>
-      <a href="https://prometheus.io/docs/introduction/overview/" target="_blank" rel="noopener">Dokumentasi resmi Prometheus</a>
-      untuk pengumpulan dan pemantauan metrik.
-    </li>
-    <li>
-      <strong>Grafana:</strong>
-      <a href="https://grafana.com/docs/" target="_blank" rel="noopener">Dokumentasi resmi Grafana</a>
-      untuk membuat dashboard visualisasi data.
-    </li>
-    <li>
-      <strong>Node Exporter:</strong>
-      <a href="https://github.com/prometheus/node_exporter" target="_blank" rel="noopener">Repositori resmi Node Exporter</a>
-      untuk menyediakan metrik sistem Linux.
-    </li>
-    <li>
-      <strong>Linux top:</strong>
-      <a href="https://man7.org/linux/man-pages/man1/top.1.html" target="_blank" rel="noopener">Dokumentasi perintah top</a>
-      untuk melihat proses dan penggunaan sumber daya.
-    </li>
-    <li>
-      <strong>Linux iostat:</strong>
-      <a href="https://man7.org/linux/man-pages/man1/iostat.1.html" target="_blank" rel="noopener">Dokumentasi perintah iostat</a>
-      untuk memeriksa aktivitas perangkat penyimpanan.
-    </li>
-  </ul>
+<div class="table-wrap">
+<table>
+<thead>
+<tr>
+<th>Indikator</th>
+<th>Node A</th>
+<th>Node B</th>
+</tr>
+</thead>
+<tbody>
+<tr><td>Penggunaan CPU</td><td>35%</td><td>75%</td></tr>
+<tr><td>Penggunaan RAM</td><td>4 GB</td><td>7 GB</td></tr>
+<tr><td>Penyimpanan terpakai</td><td>120 GB</td><td>180 GB</td></tr>
+<tr><td>Bandwidth rata-rata</td><td>15 Mbps</td><td>30 Mbps</td></tr>
+<tr><td>Throughput ilustratif</td><td>100 transaksi/detik</td><td>110 transaksi/detik</td></tr>
+</tbody>
+</table>
+</div>
 
-  <h2>9. Kesalahan Umum dalam Analisis</h2>
-  <ul>
-    <li>Menganggap CPU rendah selalu berarti jaringan lebih baik.</li>
-    <li>Membandingkan dua node dengan spesifikasi berbeda tanpa penyesuaian.</li>
-    <li>Mengabaikan keamanan dan desentralisasi ketika mengejar kinerja.</li>
-    <li>Mengambil kesimpulan dari pengukuran yang terlalu singkat.</li>
-    <li>Menganggap throughput tinggi selalu berarti pengalaman pengguna lebih baik.</li>
-  </ul>
+<p>
+Dari contoh tersebut, Node B menggunakan CPU lebih tinggi tetapi
+peningkatan throughput relatif kecil. Hal ini dapat menjadi alasan
+untuk melakukan pemeriksaan lebih lanjut. Namun, kesimpulan tidak
+boleh dibuat hanya berdasarkan satu tabel.
+</p>
 
-  <h2>10. Checklist Analisis untuk Pemula</h2>
-  <ul>
-    <li>Apakah penggunaan CPU sudah dicatat?</li>
-    <li>Apakah kapasitas RAM mencukupi?</li>
-    <li>Apakah penyimpanan memiliki ruang yang memadai?</li>
-    <li>Apakah disk I/O berjalan normal?</li>
-    <li>Apakah koneksi jaringan stabil?</li>
-    <li>Apakah throughput dan latency diukur bersamaan?</li>
-    <li>Apakah kondisi pengujian sudah didokumentasikan?</li>
-  </ul>
+<h2>5. Cara Menghitung Efisiensi Secara Sederhana</h2>
 
-  <h2>11. Kesimpulan</h2>
-  <p>
-    Analisis efisiensi sumber daya membantu memahami bagaimana jaringan
-    blockchain menggunakan CPU, RAM, penyimpanan, dan koneksi jaringan
-    untuk menjalankan aktivitasnya.
-  </p>
-  <p>
-    Pemahaman yang baik tidak hanya berfokus pada angka penggunaan
-    perangkat, tetapi juga mempertimbangkan throughput, latency,
-    stabilitas, keamanan, dan kondisi pengujian. Dengan pendekatan
-    terukur, pemula dapat memahami kinerja infrastruktur blockchain
-    secara lebih objektif.
-  </p>
+<p>
+Salah satu pendekatan awal adalah membandingkan jumlah pekerjaan
+yang diselesaikan dengan sumber daya yang digunakan.
+</p>
 
-  <h2>Artikel Terkait</h2>
-  <ul>
-    <li>
-      <a href="/blockchain-network-scalability-resource-efficiency-monitoring-untuk-pemula.html">
-        Blockchain Network Resource Efficiency Monitoring
-      </a>
-    </li>
-    <li>
-      <a href="/blockchain-network-scalability-resource-efficiency-optimization-untuk-pemula.html">
-        Blockchain Network Resource Efficiency Optimization
-      </a>
-    </li>
-    <li>
-      <a href="/web3-pemula.html">Panduan Web3 untuk Pemula</a>
-    </li>
-  </ul>
+<div class="note">
+<strong>Contoh rumus sederhana:</strong><br>
+Efisiensi relatif = jumlah transaksi yang diproses ÷ penggunaan CPU.
+</div>
 
-  <div class="note">
-    <strong>Disclaimer:</strong> Artikel ini ditujukan untuk edukasi.
-    Contoh angka dan perhitungan merupakan ilustrasi, bukan klaim
-    performa jaringan tertentu atau rekomendasi investasi.
-  </div>
+<p>
+Jika suatu node memproses 100 transaksi per detik dengan penggunaan
+CPU 50%, hasil perbandingan sederhananya adalah 2 transaksi per detik
+untuk setiap satu poin persentase penggunaan CPU.
+</p>
+
+<p>
+Perhitungan tersebut hanya alat perbandingan sederhana. Untuk analisis
+yang lebih akurat, gunakan periode pengamatan, jenis perangkat,
+konfigurasi node, dan kondisi jaringan yang setara.
+</p>
+
+<h2>6. Metode Pengujian yang Lebih Adil</h2>
+
+<ol>
+<li>Tentukan tujuan pengukuran, misalnya membandingkan dua konfigurasi node.</li>
+<li>Gunakan perangkat dan lingkungan pengujian yang terdokumentasi.</li>
+<li>Catat penggunaan CPU, RAM, disk, dan bandwidth.</li>
+<li>Ukur throughput dan latency dalam periode yang sama.</li>
+<li>Ulangi pengujian untuk mengurangi pengaruh kondisi sesaat.</li>
+<li>Dokumentasikan konfigurasi perangkat lunak dan jaringan.</li>
+</ol>
+
+<div class="note">
+<strong>Catatan:</strong> Perbandingan harus mempertimbangkan jenis
+blockchain, mekanisme konsensus, jumlah validator, beban transaksi,
+dan konfigurasi perangkat. Hasil dari dua jaringan berbeda belum
+tentu dapat dibandingkan secara langsung.
+</div>
+
+<h2>7. Mengenali Kemungkinan Hambatan</h2>
+
+<h3>CPU Tinggi</h3>
+<p>
+Periksa proses yang menggunakan CPU, beban validasi, aktivitas smart
+contract, dan proses latar belakang.
+</p>
+
+<h3>RAM Terus Meningkat</h3>
+<p>
+Periksa penggunaan memori aplikasi, cache, proses yang berjalan,
+dan kemungkinan kebocoran memori.
+</p>
+
+<h3>Disk I/O Tinggi</h3>
+<p>
+Periksa aktivitas database, kecepatan media penyimpanan, ruang kosong,
+serta proses sinkronisasi.
+</p>
+
+<h3>Latency Meningkat</h3>
+<p>
+Periksa kualitas koneksi, jarak antarnode, kondisi jaringan,
+antrean pemrosesan, dan beban sistem.
+</p>
+
+<h2>8. Tools untuk Membantu Analisis</h2>
+
+<ul>
+<li>
+<strong>Prometheus:</strong>
+<a href="https://prometheus.io/docs/introduction/overview/" target="_blank" rel="noopener">Dokumentasi resmi Prometheus</a>
+untuk pengumpulan dan pemantauan metrik.
+</li>
+<li>
+<strong>Grafana:</strong>
+<a href="https://grafana.com/docs/" target="_blank" rel="noopener">Dokumentasi resmi Grafana</a>
+untuk membuat dashboard visualisasi data.
+</li>
+<li>
+<strong>Node Exporter:</strong>
+<a href="https://github.com/prometheus/node_exporter" target="_blank" rel="noopener">Repositori resmi Node Exporter</a>
+untuk menyediakan metrik sistem Linux.
+</li>
+<li>
+<strong>Linux top:</strong>
+<a href="https://man7.org/linux/man-pages/man1/top.1.html" target="_blank" rel="noopener">Dokumentasi perintah top</a>
+untuk melihat proses dan penggunaan sumber daya.
+</li>
+<li>
+<strong>Linux iostat:</strong>
+<a href="https://man7.org/linux/man-pages/man1/iostat.1.html" target="_blank" rel="noopener">Dokumentasi perintah iostat</a>
+untuk memeriksa aktivitas perangkat penyimpanan.
+</li>
+</ul>
+
+<h2>9. Kesalahan Umum dalam Analisis</h2>
+
+<ul>
+<li>Menganggap CPU rendah selalu berarti jaringan lebih baik.</li>
+<li>Membandingkan dua node dengan spesifikasi berbeda tanpa penyesuaian.</li>
+<li>Mengabaikan keamanan dan desentralisasi ketika mengejar kinerja.</li>
+<li>Mengambil kesimpulan dari pengukuran yang terlalu singkat.</li>
+<li>Menganggap throughput tinggi selalu berarti pengalaman pengguna lebih baik.</li>
+</ul>
+
+<h2>10. Checklist Analisis untuk Pemula</h2>
+
+<ul>
+<li>Apakah penggunaan CPU sudah dicatat?</li>
+<li>Apakah kapasitas RAM mencukupi?</li>
+<li>Apakah penyimpanan memiliki ruang yang memadai?</li>
+<li>Apakah disk I/O berjalan normal?</li>
+<li>Apakah koneksi jaringan stabil?</li>
+<li>Apakah throughput dan latency diukur bersamaan?</li>
+<li>Apakah kondisi pengujian sudah didokumentasikan?</li>
+</ul>
+
+<h2 id="kesimpulan">11. Kesimpulan</h2>
+
+<p>
+Analisis efisiensi sumber daya membantu memahami bagaimana jaringan
+blockchain menggunakan CPU, RAM, penyimpanan, dan koneksi jaringan
+untuk menjalankan aktivitasnya.
+</p>
+
+<p>
+Pemahaman yang baik tidak hanya berfokus pada angka penggunaan
+perangkat, tetapi juga mempertimbangkan throughput, latency,
+stabilitas, keamanan, dan kondisi pengujian. Dengan pendekatan
+terukur, pemula dapat memahami kinerja infrastruktur blockchain
+secara lebih objektif.
+</p>
+
+<h2>Artikel Terkait</h2>
+
+<ul>
+<li>
+<a href="/blockchain-network-scalability-resource-efficiency-monitoring-untuk-pemula.html">
+Blockchain Network Resource Efficiency Monitoring
+</a>
+</li>
+<li>
+<a href="/blockchain-network-scalability-resource-efficiency-optimization-untuk-pemula.html">
+Blockchain Network Resource Efficiency Optimization
+</a>
+</li>
+<li>
+<a href="/web3-pemula.html">Panduan Web3 untuk Pemula</a>
+</li>
+</ul>
+
+<div class="note">
+<strong>Disclaimer:</strong> Artikel ini ditujukan untuk edukasi.
+Contoh angka dan perhitungan merupakan ilustrasi, bukan klaim
+performa jaringan tertentu atau rekomendasi investasi.
+</div>
 
 </main>
 
 <footer>
-  <p>WEB3 VISION | Belajar Blockchain dan Web3</p>
-  <p>
-    <a href="/">Beranda</a>
-    <a href="/privacy-policy.html">Privacy Policy</a>
-    <a href="/disclaimer.html">Disclaimer</a>
-    <a href="/contact.html">Contact</a>
-  </p>
-  <p>&copy; 2026 WEB3 VISION. All Rights Reserved.</p>
+<p><strong>WEB3 VISION</strong> | Belajar Blockchain dan Web3</p>
+<p>
+<a href="/">Beranda</a>
+<a href="/privacy-policy.html">Privacy Policy</a>
+<a href="/disclaimer.html">Disclaimer</a>
+<a href="/contact.html">Contact</a>
+</p>
+<p>&copy; 2026 WEB3 VISION. All Rights Reserved.</p>
 </footer>
 
 </body>
