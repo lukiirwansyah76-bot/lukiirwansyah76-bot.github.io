@@ -97,6 +97,36 @@
   <p>Sebuah penyedia RPC blockchain dapat membagi permintaan pengguna ke beberapa server agar satu server tidak menerima seluruh beban. Sementara itu, operator node dapat memantau penggunaan CPU dan penyimpanan untuk menentukan kapan perangkat perlu ditingkatkan.</p>
   <p>Contoh tersebut menunjukkan bahwa pengelolaan sumber daya dapat membantu layanan pendukung blockchain menghadapi peningkatan aktivitas. Dampaknya terhadap kapasitas protokol tetap bergantung pada arsitektur jaringan.</p>
 
+
+  <h2>10. Resource Allocation Node Berbeda dari Kapasitas Protokol</h2>
+  <p>Resource allocation pada node berkaitan dengan cara perangkat menggunakan CPU, RAM, penyimpanan, dan bandwidth untuk menjalankan tugasnya. Sementara itu, kapasitas protokol berkaitan dengan batas dan desain sistem blockchain dalam memproses serta mengonfirmasi transaksi.</p>
+  <p>Menambah RAM atau mengganti CPU dapat membantu sebuah node bekerja lebih stabil ketika perangkat menjadi hambatan. Namun, tindakan tersebut tidak otomatis mengubah aturan protokol, meningkatkan kapasitas seluruh jaringan, atau mempercepat finalitas transaksi.</p>
+  <p>Karena itu, operator perlu membedakan masalah pada perangkat lokal, koneksi jaringan, perangkat lunak klien, dan batas desain protokol sebelum menentukan solusi.</p>
+
+  <h2>11. Contoh Kasus: Operator Node Menghadapi Beban Meningkat</h2>
+  <p>Bayangkan seorang operator menjalankan node dan melihat penggunaan RAM terus meningkat, sementara ruang penyimpanan semakin berkurang. Pada saat yang sama, koneksi internet masih stabil.</p>
+  <p>Langkah yang masuk akal bukan langsung membeli seluruh perangkat baru. Operator dapat memeriksa kebutuhan RAM klien yang digunakan, ukuran database, ruang kosong disk, log aplikasi, dan dokumentasi resmi jaringan.</p>
+  <p>Jika masalahnya berasal dari ruang penyimpanan, peningkatan kapasitas disk atau pengaturan penyimpanan yang memang didukung klien mungkin lebih relevan daripada mengganti CPU. Jika RAM menjadi hambatan, operator dapat mengevaluasi spesifikasi memori sesuai rekomendasi klien.</p>
+  <p>Ini merupakan ilustrasi proses pengambilan keputusan, bukan spesifikasi universal. Kebutuhan perangkat berbeda menurut jaringan, jenis node, klien, dan konfigurasi.</p>
+
+  <h2>12. Checklist Praktis Sebelum Meningkatkan Perangkat</h2>
+  <ul>
+    <li><strong>Identifikasi jenis node:</strong> pastikan apakah perangkat menjalankan full node, validator, atau layanan RPC.</li>
+    <li><strong>Periksa dokumentasi:</strong> baca persyaratan perangkat keras dan perangkat lunak dari jaringan serta klien yang digunakan.</li>
+    <li><strong>Ukur penggunaan aktual:</strong> amati CPU, RAM, ruang disk, aktivitas disk, dan bandwidth saat beban normal maupun tinggi.</li>
+    <li><strong>Temukan hambatan utama:</strong> tentukan apakah masalah berasal dari perangkat, koneksi, konfigurasi, atau aplikasi.</li>
+    <li><strong>Hitung biaya operasional:</strong> pertimbangkan listrik, koneksi internet, penyimpanan, pemeliharaan, dan kebutuhan cadangan.</li>
+    <li><strong>Evaluasi kembali:</strong> setelah perubahan, bandingkan metrik sebelum dan sesudah peningkatan.</li>
+  </ul>
+
+  <h2>13. Referensi dan Dokumentasi Resmi</h2>
+  <p>Untuk memahami kebutuhan node dan pengelolaan infrastrukturnya lebih lanjut, gunakan dokumentasi resmi berikut:</p>
+  <ul>
+    <li><a href="https://ethereum.org/developers/docs/nodes-and-clients/" target="_blank" rel="noopener noreferrer">Ethereum: Nodes and Clients</a> — pengenalan node, klien, dan peran masing-masing.</li>
+    <li><a href="https://ethereum.org/developers/docs/nodes-and-clients/run-a-node/" target="_blank" rel="noopener noreferrer">Ethereum: Run a Node</a> — panduan menjalankan node dan mempertimbangkan kebutuhan perangkat.</li>
+    <li><a href="https://ethereum.org/developers/docs/nodes-and-clients/node-architecture/" target="_blank" rel="noopener noreferrer">Ethereum: Node Architecture</a> — gambaran arsitektur dan tanggung jawab komponen node.</li>
+  </ul>
+
   <div class="info">
     <strong>Kesimpulan:</strong>
     Resource allocation merupakan bagian penting dari pengelolaan infrastruktur blockchain. Penggunaan CPU, memori, bandwidth, dan penyimpanan yang efisien dapat mendukung performa serta kestabilan jaringan. Pengelolaannya perlu mempertimbangkan biaya, keamanan, dan desentralisasi.
