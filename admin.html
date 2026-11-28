@@ -151,6 +151,11 @@ async function loadCampaigns() {
 }
 
 async function updateStatus(id, newStatus) {
+  if (!["approved", "rejected"].includes(newStatus)) {
+    alert("Status tidak valid.");
+    return;
+  }
+
   if (!confirm("Ubah status pengajuan menjadi " + newStatus + "?")) return;
 
   const {error} = await supabaseClient
@@ -166,7 +171,6 @@ async function updateStatus(id, newStatus) {
   alert("Status berhasil diperbarui.");
   loadCampaigns();
 }
-
 async function logoutAdmin() {
   await supabaseClient.auth.signOut();
   dashboard.style.display = "none";
