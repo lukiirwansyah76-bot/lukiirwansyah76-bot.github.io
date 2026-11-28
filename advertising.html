@@ -253,13 +253,69 @@ form.addEventListener("submit", async function(event) {
   const data = new FormData(form);
 
   
+
+  const allowedPromotions = [
+    "Banner Advertising",
+    "Sponsored Article",
+    "Project Promotion"
+  ];
+  const allowedPackages = ["Starter", "Growth", "Premium"];
+  const allowedBudgets = [
+    "Di bawah Rp100.000",
+    "Rp100.000 - Rp500.000",
+    "Rp500.000 - Rp1.000.000",
+    "Di atas Rp1.000.000",
+    "Diskusi terlebih dahulu"
+  ];
+
+  if (
+    !String(data.get("Nama Pengiklan") || "").trim() ||
+    !String(data.get("Email Pengiklan") || "").trim() ||
+    !String(data.get("Brand atau Proyek") || "").trim()
+  ) {
+    alert("Lengkapi semua data wajib.");
+    button.disabled = false;
+    button.textContent = "Kirim Permintaan Iklan";
+    return;
+  }
+
+  if (
+    !allowedPromotions.includes(data.get("Jenis Promosi")) ||
+    !allowedPackages.includes(data.get("Paket")) ||
+    !allowedBudgets.includes(data.get("Anggaran"))
+  ) {
+    alert("Pilihan formulir tidak valid.");
+    button.disabled = false;
+    button.textContent = "Kirim Permintaan Iklan";
+    return;
+  }
+
+  const websiteUrl = String(data.get("Link") || "").trim();
+
+  if (websiteUrl) {
+    try {
+      const parsedUrl = new URL(websiteUrl);
+      if (
+        !["http:", "https:"].includes(parsedUrl.protocol) ||
+        !parsedUrl.hostname
+      ) {
+        throw new Error("URL tidak valid");
+      }
+    } catch {
+      alert("Link harus menggunakan URL HTTP atau HTTPS yang valid.");
+      button.disabled = false;
+      button.textContent = "Kirim Permintaan Iklan";
+      return;
+    }
+  }
+
  const campaign = {
   advertiser_name: data.get("Nama Pengiklan"),
   advertiser_email: data.get("Email Pengiklan"),
   brand_name: data.get("Brand atau Proyek"),
   promotion_type: data.get("Jenis Promosi"),
   package_name: data.get("Paket"),
-  website_url: data.get("Link") || null,
+  website_url: websiteUrl || null,
   budget: data.get("Anggaran"),
   message: data.get("Pesan") || null,
   status: "pending"
