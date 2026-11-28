@@ -1320,13 +1320,24 @@ Advertise With Us
       card.insertBefore(img,title);
     }
 
-    const link = document.createElement("a");
-    link.href = ad.target_url;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.textContent = "Visit Project";
+    try {
+      const targetUrl = new URL(ad.target_url);
 
-    card.appendChild(link);
+      if (
+        ["http:", "https:"].includes(targetUrl.protocol) &&
+        targetUrl.hostname
+      ) {
+        const link = document.createElement("a");
+        link.href = targetUrl.href;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = "Visit Project";
+
+        card.appendChild(link);
+      }
+    } catch {
+      console.warn("URL kampanye tidak valid:", ad.id);
+    }
     container.appendChild(card);
   });
 })();
