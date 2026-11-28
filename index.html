@@ -1312,12 +1312,20 @@ Advertise With Us
     title.textContent = ad.brand_name || "Web3 Project";
     card.appendChild(title);
 
-    if(ad.banner_url && /^https:\/\//i.test(ad.banner_url)) {
-      const img = document.createElement("img");
-      img.src = ad.banner_url;
-      img.alt = title.textContent;
-      img.loading = "lazy";
-      card.insertBefore(img,title);
+    if (ad.banner_url) {
+      try {
+        const bannerUrl = new URL(ad.banner_url);
+
+        if (bannerUrl.protocol === "https:" && bannerUrl.hostname) {
+          const img = document.createElement("img");
+          img.src = bannerUrl.href;
+          img.alt = title.textContent;
+          img.loading = "lazy";
+          card.insertBefore(img, title);
+        }
+      } catch {
+        console.warn("URL banner tidak valid:", ad.id);
+      }
     }
 
     try {
