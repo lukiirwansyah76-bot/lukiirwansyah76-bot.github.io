@@ -191,6 +191,57 @@
       komunikasi antar-node, dan solusi seperti Layer 2 atau rollups.
     </p>
 
+
+    <h2 id="contoh-penerapan-strategi">Contoh Penerapan: Menghadapi Lonjakan Beban Node</h2>
+    <p>
+      Bayangkan sebuah operator menjalankan node blockchain yang biasanya
+      menggunakan CPU dan memori pada tingkat stabil. Ketika aktivitas
+      jaringan meningkat, penggunaan CPU naik dan antrean pekerjaan mulai
+      bertambah. Operator perlu mencari sumber hambatan sebelum mengubah
+      konfigurasi.
+    </p>
+    <ol>
+      <li>Periksa metrik CPU, RAM, disk I/O, dan bandwidth.</li>
+      <li>Identifikasi proses yang paling banyak menggunakan sumber daya.</li>
+      <li>Pastikan lonjakan bukan disebabkan kesalahan konfigurasi atau gangguan.</li>
+      <li>Sesuaikan batas sumber daya atau kapasitas sesuai kebutuhan node.</li>
+      <li>Uji perubahan dan pantau dampaknya terhadap kestabilan layanan.</li>
+    </ol>
+    <p>
+      Contoh ini merupakan ilustrasi operasional, bukan data performa dari
+      jaringan blockchain tertentu. Penambahan kapasitas perangkat tidak
+      otomatis meningkatkan batas transaksi protokol.
+    </p>
+
+    <h2>Memilih Strategi Berdasarkan Kondisi</h2>
+    <ul>
+      <li><strong>Beban stabil:</strong> static allocation dapat digunakan jika kebutuhan sumber daya relatif mudah diperkirakan.</li>
+      <li><strong>Beban berubah-ubah:</strong> dynamic allocation dapat dipertimbangkan jika sistem mendukung penyesuaian kapasitas.</li>
+      <li><strong>Pekerjaan dengan prioritas berbeda:</strong> priority-based allocation dapat membantu mengatur urutan penggunaan sumber daya.</li>
+      <li><strong>Beban tidak merata:</strong> load-based allocation dapat membantu mendistribusikan pekerjaan ke komponen yang masih memiliki kapasitas.</li>
+    </ul>
+    <p>
+      Pemilihan strategi harus mempertimbangkan dukungan perangkat lunak,
+      batas protokol, keamanan, biaya, dan kemampuan operator memantau sistem.
+    </p>
+
+    <h2>Checklist Evaluasi Sebelum Mengubah Alokasi</h2>
+    <ul>
+      <li>Apakah sumber daya yang menjadi bottleneck sudah teridentifikasi?</li>
+      <li>Apakah tersedia data penggunaan CPU, RAM, storage, dan bandwidth?</li>
+      <li>Apakah perubahan sesuai dokumentasi client atau perangkat lunak node?</li>
+      <li>Apakah tersedia kapasitas cadangan untuk menghadapi lonjakan?</li>
+      <li>Apakah perubahan sudah diuji dan memiliki rencana pemulihan?</li>
+      <li>Apakah biaya tambahan sebanding dengan manfaat operasional?</li>
+    </ul>
+
+    <h2>Referensi dan Dokumentasi Resmi</h2>
+    <ul>
+      <li><a href="https://ethereum.org/developers/docs/nodes-and-clients/" target="_blank" rel="noopener noreferrer">Ethereum.org — Nodes and Clients</a>: pengenalan peran node dan client dalam jaringan Ethereum.</li>
+      <li><a href="https://ethereum.org/developers/docs/nodes-and-clients/run-a-node/" target="_blank" rel="noopener noreferrer">Ethereum.org — Run a Node</a>: panduan menjalankan node dan pertimbangan perangkat.</li>
+      <li><a href="https://geth.ethereum.org/docs/fundamentals/node-architecture" target="_blank" rel="noopener noreferrer">Geth Documentation — Node Architecture</a>: penjelasan arsitektur execution client.</li>
+    </ul>
+
     <h2>13. Kesimpulan</h2>
     <p>
       Resource allocation strategies membantu mengatur penggunaan CPU,
