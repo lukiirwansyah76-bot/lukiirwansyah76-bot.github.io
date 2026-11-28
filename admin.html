@@ -184,6 +184,14 @@ async function logoutAdmin() {
   message.textContent = "Anda sudah logout.";
 }
 
+supabaseClient.auth.onAuthStateChange((event, session) => {
+  if (event === "SIGNED_OUT") {
+    dashboard.style.display = "none";
+    loginBox.style.display = "block";
+    message.textContent = "Sesi berakhir. Silakan login kembali.";
+  }
+});
+
 checkAdmin();
 </script>
 </body>
