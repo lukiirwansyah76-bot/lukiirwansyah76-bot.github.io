@@ -144,10 +144,16 @@ async function loadCampaigns() {
       <p><b>Tanggal:</b> ${safe(ad.created_at)}</p>
       ${ad.banner_url ? `<p><b>Banner:</b> ${safe(ad.banner_url)}</p>` : ""}
       ${ad.target_url ? `<p><b>Target:</b> ${safe(ad.target_url)}</p>` : ""}
-      <button class="approve" onclick="updateStatus('${ad.id}','approved')">SETUJUI</button>
-      <button class="reject" onclick="updateStatus('${ad.id}','rejected')">TOLAK</button>
+      <button class="approve" data-id="${safe(ad.id)}" data-status="approved">SETUJUI</button>
+      <button class="reject" data-id="${safe(ad.id)}" data-status="rejected">TOLAK</button>
     </div>
   `).join("");
+
+  list.onclick = event => {
+    const button = event.target.closest("button[data-id][data-status]");
+    if (!button || !list.contains(button)) return;
+    updateStatus(button.dataset.id, button.dataset.status);
+  };
 }
 
 async function updateStatus(id, newStatus) {
