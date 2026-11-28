@@ -39,6 +39,38 @@
       border-top: 1px solid #29415c;
       color: #a9bfd8;
     }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      margin: 20px 0;
+      border: 1px solid #29415c;
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      min-width: 650px;
+      border-collapse: collapse;
+      background: #10243d;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #29415c;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      color: #39dcff;
+      background: #16314f;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 14px;
+      }
+      .table-wrap {
+        -webkit-overflow-scrolling: touch;
+      }
+    }
   </style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3795917704079662" crossorigin="anonymous"></script>
 </head>
@@ -146,13 +178,88 @@
     Ketiganya merupakan tujuan penting. Namun, pilihan desain dan kompromi teknis dapat membuat peningkatan pada satu aspek memengaruhi aspek lainnya. Trilemma bukan hukum mutlak, melainkan kerangka untuk memahami tantangan desain blockchain.
   </p>
 
-  <h2>10. Kesimpulan</h2>
+
+  <h2>10. Contoh Sederhana: Mengapa Skalabilitas Penting?</h2>
+  <p>
+    Bayangkan sebuah jaringan blockchain biasanya menerima 100 transaksi setiap detik. Ketika aktivitas meningkat menjadi 300 transaksi per detik, sementara kapasitas pemrosesannya tetap 100 transaksi, sebagian transaksi dapat menunggu giliran.
+  </p>
+  <p>
+    Kondisi tersebut dapat menyebabkan antrean transaksi bertambah. Pengguna mungkin perlu menunggu lebih lama atau membayar biaya lebih tinggi agar transaksinya diprioritaskan. Angka ini hanya ilustrasi sederhana, bukan data performa jaringan tertentu.
+  </p>
+
+  <h2>11. Perbandingan Pendekatan Skalabilitas</h2>
+  <p>
+    Setiap pendekatan memiliki cara kerja dan kompromi yang berbeda. Tabel berikut membantu memahami gambaran umumnya.
+  </p>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Pendekatan</th>
+        <th>Cara Kerja</th>
+        <th>Hal yang Perlu Diperhatikan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Layer 1</td>
+        <td>Mengoptimalkan protokol blockchain utama.</td>
+        <td>Dampak terhadap keamanan, kapasitas node, dan desentralisasi.</td>
+      </tr>
+      <tr>
+        <td>Layer 2</td>
+        <td>Memproses sebagian aktivitas di atas jaringan dasar.</td>
+        <td>Keamanan sistem tambahan, biaya, dan proses pemindahan aset.</td>
+      </tr>
+      <tr>
+        <td>Sharding</td>
+        <td>Membagi beban kerja atau data menjadi beberapa bagian.</td>
+        <td>Koordinasi, komunikasi antarbagian, dan keamanan shard.</td>
+      </tr>
+      <tr>
+        <td>Rollups</td>
+        <td>Memproses transaksi di luar Layer 1 dan mengirimkan data atau bukti ke jaringan utama.</td>
+        <td>Ketersediaan data, mekanisme validasi, dan penarikan aset.</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>12. Bagaimana Menilai Solusi Skalabilitas?</h2>
+  <p>
+    Tidak cukup hanya melihat klaim jumlah transaksi per detik. Evaluasi juga perlu mempertimbangkan beberapa hal berikut:
+  </p>
+  <ul>
+    <li><strong>Throughput:</strong> berapa banyak transaksi yang benar-benar berhasil diproses dalam kondisi penggunaan nyata?</li>
+    <li><strong>Latency:</strong> berapa lama pengguna menunggu respons dan konfirmasi?</li>
+    <li><strong>Biaya:</strong> apakah biaya transaksi tetap wajar ketika aktivitas meningkat?</li>
+    <li><strong>Keamanan:</strong> bagaimana transaksi diverifikasi dan bagaimana risiko kegagalan ditangani?</li>
+    <li><strong>Desentralisasi:</strong> apakah perangkat yang dibutuhkan untuk menjalankan node masih dapat dijangkau banyak pihak?</li>
+  </ul>
+  <p>
+    Dengan membandingkan faktor-faktor tersebut, pengguna dapat memahami bahwa solusi skalabilitas terbaik bergantung pada kebutuhan dan desain masing-masing blockchain.
+  </p>
+
+  <h2>13. Kesimpulan</h2>
   <p>
     Blockchain Network Scalability adalah kemampuan jaringan untuk berkembang dan menangani peningkatan aktivitas. Solusinya dapat dilakukan pada Layer 1 maupun melalui Layer 2, termasuk pendekatan seperti sharding dan rollups.
   </p>
   <p>
     Skalabilitas yang baik perlu dinilai bersama throughput, latency, keamanan, desentralisasi, biaya, dan pengalaman pengguna. Tidak ada satu pendekatan yang otomatis menjadi solusi terbaik untuk semua blockchain.
   </p>
+
+  <h2>14. Referensi dan Bacaan Lanjutan</h2>
+  <p>
+    Untuk memahami teknologi skalabilitas blockchain lebih dalam,
+    berikut beberapa dokumentasi resmi Ethereum yang dapat dijadikan bahan bacaan:
+  </p>
+  <ul>
+    <li><a href="https://ethereum.org/developers/docs/scaling/" target="_blank" rel="noopener noreferrer">Ethereum Scaling</a> — pengantar skalabilitas, Layer 1, Layer 2, dan sharding.</li>
+    <li><a href="https://ethereum.org/developers/docs/scaling/optimistic-rollups/" target="_blank" rel="noopener noreferrer">Optimistic Rollups</a> — cara kerja dan mekanisme keamanan optimistic rollups.</li>
+    <li><a href="https://ethereum.org/developers/docs/scaling/zk-rollups/" target="_blank" rel="noopener noreferrer">Zero-Knowledge Rollups</a> — penjelasan bukti validitas dan pemrosesan transaksi.</li>
+    <li><a href="https://ethereum.org/developers/docs/data-availability/" target="_blank" rel="noopener noreferrer">Data Availability</a> — pentingnya ketersediaan data dalam sistem blockchain.</li>
+    <li><a href="https://ethereum.org/roadmap/danksharding/" target="_blank" rel="noopener noreferrer">Danksharding</a> — pengembangan kapasitas data untuk mendukung rollups.</li>
+  </ul>
 
   <div class="info">
     <strong>Catatan:</strong> Setiap teknologi skalabilitas memiliki karakteristik dan asumsi keamanan berbeda. Pelajari dokumentasi resmi jaringan sebelum menggunakan protokol atau memindahkan aset.
